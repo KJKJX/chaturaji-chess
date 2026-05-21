@@ -1,6 +1,7 @@
 @import "tailwindcss";
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -44,4 +45,10 @@ input[type="number"] {
     transform: scale(1);
     opacity: 0;
   }
+}
+.cursive {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }

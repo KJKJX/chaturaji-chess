@@ -13,13 +13,12 @@ function Inserter({ onClickDisplay }) {
       exit={{ opacity: 0 }}
     >
       <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, filter: "blur(5px)" }}
+        animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 1.5, delay: 1 }}
-        className="text-white/80 text-[2vw] font-bold"
+        className="text-white/80 text-[2vw] font-bold w-full text-center"
       >
-        Chaturaji Chess Profile
-        <hr className="h-[0.1vw] text-white/20 w-full mt-[1vw] absolute left-0 right-0" />
+        Your Profile
       </motion.p>
       <motion.i
         initial={{ opacity: 0, y: 10 }}
@@ -29,7 +28,7 @@ function Inserter({ onClickDisplay }) {
           damping: 10,
           delay: 2,
         }}
-        className="mt-[1.5vw] text-[1.6vw] font-[500] text-white/80"
+        className="mt-[0.5vw] text-[1.6vw] font-[500] text-white/80"
       >
         Insert Your:
       </motion.i>
@@ -93,13 +92,11 @@ function Inserter({ onClickDisplay }) {
       </div>
       <motion.button
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1.5,
-          delay: 4,
-        }}
+        animate={{ opacity: 1, transition: { delay: 4 } }}
+        whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+        whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
         onClick={() => onClickDisplay(elo, matches)}
-        className="mt-[2vw] bg-black/20 p-[1.2vw] rounded-[1vw] font-[500] px-[2vw] border-[0.1vw] border-white/20 cursor-pointer duration-300 hover:scale-105 text-center text-[1.2vw] active:scale-95 text-white/80"
+        className="mt-[2vw] bg-black/20 p-[1.2vw] rounded-[1vw] font-[500] px-[2vw] border-[0.1vw] border-white/20 cursor-pointer text-center text-[1.2vw] text-white/80"
       >
         Display Profile
       </motion.button>

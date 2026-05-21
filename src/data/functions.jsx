@@ -2,34 +2,34 @@ export const convertRankToString = function (rank) {
   if (rank < 1500) {
     return "bronze";
   } else if (rank < 1583.33) {
-    return "low silver";
+    return "silver I";
   } else if (rank < 1666.66) {
-    return "silver";
+    return "silver II";
   } else if (rank < 1750) {
-    return "high silver";
+    return "silver III";
   } else if (rank < 1833.33) {
-    return "low gold";
+    return "gold I";
   } else if (rank < 1916.66) {
-    return "gold";
+    return "gold II";
   } else if (rank < 2000) {
-    return "high gold";
+    return "gold III";
   } else if (rank < 2083.33) {
-    return "low platinum";
+    return "platinum I";
   } else if (rank < 2166.66) {
-    return "platinum";
+    return "platinum II";
   } else if (rank < 2250) {
-    return "high platinum";
+    return "platinum III";
   } else if (rank < 2333.33) {
-    return "low diamond";
+    return "emerald I";
   } else if (rank < 2416.66) {
-    return "diamond";
+    return "emerald II";
   } else if (rank < 2500) {
-    return "high diamond";
+    return "emerald III";
   } else if (rank < 2583.33) {
-    return "grandmaster";
+    return "grandmaster I";
   } else if (rank < 2666.66) {
-    return "ultra master";
+    return "grandmaster II";
   } else {
-    return "hypermaster";
+    return "grandmaster III";
   }
 };

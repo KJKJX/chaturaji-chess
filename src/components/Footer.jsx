@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-black/40 border-t-[0.1vw] border-white/20 w-full h-[4vw] p-[1vw] flex items-center">
+    <footer className="bg-black/40 border-t-[0.1vw] border-white/20 w-full h-[4vw] p-[1vw] mt-auto flex items-center z-10">
       <p className="text-white/70 text-[1vw]">
         © {new Date().getFullYear()}{" "}
         <a
