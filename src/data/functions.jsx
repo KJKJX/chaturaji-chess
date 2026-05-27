@@ -1,35 +1,38 @@
-export const convertRankToString = function (rank) {
-  if (rank < 1500) {
-    return "bronze";
-  } else if (rank < 1583.33) {
-    return "silver I";
-  } else if (rank < 1666.66) {
-    return "silver II";
-  } else if (rank < 1750) {
-    return "silver III";
-  } else if (rank < 1833.33) {
-    return "gold I";
-  } else if (rank < 1916.66) {
-    return "gold II";
-  } else if (rank < 2000) {
-    return "gold III";
-  } else if (rank < 2083.33) {
-    return "platinum I";
-  } else if (rank < 2166.66) {
-    return "platinum II";
-  } else if (rank < 2250) {
-    return "platinum III";
-  } else if (rank < 2333.33) {
-    return "emerald I";
-  } else if (rank < 2416.66) {
-    return "emerald II";
-  } else if (rank < 2500) {
-    return "emerald III";
-  } else if (rank < 2583.33) {
-    return "grandmaster I";
-  } else if (rank < 2666.66) {
-    return "grandmaster II";
-  } else {
-    return "grandmaster III";
+import { rankData } from "./rankData";
+import { ranks } from "./ranks";
+import { tips } from "./tips";
+export const convertEloToString = function (rank) {
+  const match = [...rankData]
+    .reverse()
+    .find((tier) => rank >= tier.requiredElo);
+  return match ? match.title : "unranked";
+};
+export const convertStringToRankObject = function (rankString) {
+  return rankData.find((dataRank) => dataRank.title === rankString);
+};
+export const convertStringToImage = function (rankString) {
+  return ranks.find((rankImage) => rankString?.includes(rankImage.rank)) || "";
+};
+export const getNextRankObject = function (currentRankString) {
+  return (
+    rankData.at(
+      rankData.indexOf(convertStringToRankObject(currentRankString)) + 1
+    ) || rankData.at(-1)
+  );
+};
+export const getRandomTips = function (amount) {
+  if (typeof amount !== "number") {
+    return [];
   }
+  let randomTips = [];
+  let tipAmount = amount;
+  while (tipAmount > 0) {
+    const newTip = tips[Math.trunc(Math.random() * tips.length)];
+    if (randomTips.every((tip) => tip?.id !== newTip?.id)) {
+      randomTips.push(newTip);
+      tipAmount -= 1;
+    }
+  }
+  console.log(randomTips);
+  return randomTips;
 };

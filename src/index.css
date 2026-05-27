@@ -46,9 +46,13 @@ input[type="number"] {
     opacity: 0;
   }
 }
-.cursive {
-  font-family: "Edu NSW ACT Cursive", cursive;
-  font-optical-sizing: auto;
-  font-weight: 600;
+@font-face {
+  font-family: "Dantene";
+  src: url("./fonts/Dantene.otf") format("opentype");
+  font-weight: normal;
   font-style: normal;
+}
+.cursive {
+  font-family: "Dantene", cursive;
+  letter-spacing: 2px;
 }

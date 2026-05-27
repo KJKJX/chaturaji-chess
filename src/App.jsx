@@ -3,7 +3,7 @@ import Main from "./components/Main";
 import Inserter from "./components/Inserter";
 import Footer from "./components/Footer";
 import { AnimatePresence, motion } from "framer-motion";
-import { convertRankToString } from "./data/functions";
+import { convertEloToString } from "./data/functions";
 import Spinner from "./components/Spinner";
 import Profile from "./components/Profile";
 import Nav from "./components/Navbar";

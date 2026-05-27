@@ -1,5 +1,7 @@
 import React from "react";
-
+import packageJson from "../../package.json";
+const version = packageJson.version;
+const lastUpdate = packageJson.lastUpdate;
 function Footer() {
   return (
     <footer className="bg-black/40 border-t-[0.1vw] border-white/20 w-full h-[4vw] p-[1vw] mt-auto flex items-center z-10">
@@ -24,7 +26,8 @@ function Footer() {
           href="https://www.chess.com/member/sxbzer0"
         >
           SxbZer0.
-        </a>
+        </a>{" "}
+        Version {version}. Updated last on {lastUpdate}.
       </p>
     </footer>
   );

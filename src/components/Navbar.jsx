@@ -18,7 +18,7 @@ function Nav() {
     <nav className="bg-black/10 border-b-[0.1vw] border-white/20 w-full h-[7vw] flex items-center">
       <div className="flex flex-row items-center ml-[1vw]">
         <img src={boat} className="h-[5vw] brightness-120 grayscale-20" />
-        <p className="cursive text-white/70 text-[1.8vw] ml-[1vw] font-black">
+        <p className="cursive text-white/70 text-[2vw] ml-[1vw] font-black">
           Chaturaji Chess Team
         </p>
       </div>

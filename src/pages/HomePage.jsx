@@ -28,7 +28,7 @@ function HomePage() {
           >
             here
           </a>
-          ! Click Profile for the main feature.)
+          ! Click the Profile tab for the main feature.)
         </motion.p>
       </div>
     </Main>

@@ -1,0 +1,18 @@
+export const rankData = [
+  { requiredElo: 0, title: "unranked" },
+  { requiredElo: 1500, title: "silver I" },
+  { requiredElo: 1583.33, title: "silver II" },
+  { requiredElo: 1666.66, title: "silver III" },
+  { requiredElo: 1750, title: "gold I" },
+  { requiredElo: 1833.33, title: "gold II" },
+  { requiredElo: 1916.66, title: "gold III" },
+  { requiredElo: 2000, title: "platinum I" },
+  { requiredElo: 2083.33, title: "platinum II" },
+  { requiredElo: 2166.66, title: "platinum III" },
+  { requiredElo: 2250, title: "emerald I" },
+  { requiredElo: 2333.33, title: "emerald II" },
+  { requiredElo: 2416.66, title: "emerald III" },
+  { requiredElo: 2500, title: "grandmaster I" },
+  { requiredElo: 2583.33, title: "grandmaster II" },
+  { requiredElo: 2666.66, title: "grandmaster III" },
+];
