@@ -29,54 +29,58 @@ function Rank({ rank, size = 1, animated = false, delay = 0 }) {
             }vw`,
           }}
         />
-        <motion.img
-          initial={
-            animated && {
-              opacity: 0,
-              scale: 0,
+        {rank.piece && (
+          <motion.img
+            initial={
+              animated && {
+                opacity: 0,
+                scale: 0,
+              }
             }
-          }
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            delay: delay + 0.5,
-          }}
-          src={rank.piece.image}
-          alt="Rank Piece"
-          style={{
-            zIndex: 1,
-            width: `${rank.piece.size * size}vw`,
-            translate: `${rank.piece.position[0] * size}vw ${
-              rank.piece.position[1] * size
-            }vw`,
-          }}
-        />
-        <motion.img
-          initial={
-            animated && {
-              opacity: 0,
-              scaleY: 0,
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              delay: delay + 0.5,
+            }}
+            src={rank.piece.image}
+            alt="Rank Piece"
+            style={{
+              zIndex: 1,
+              width: `${rank.piece.size * size}vw`,
+              translate: `${rank.piece.position[0] * size}vw ${
+                rank.piece.position[1] * size
+              }vw`,
+            }}
+          />
+        )}
+        {rank.outline && (
+          <motion.img
+            initial={
+              animated && {
+                opacity: 0,
+                scaleY: 0,
+              }
             }
-          }
-          animate={{
-            opacity: 1,
-            scaleY: 1,
-          }}
-          transition={{
-            delay: delay + 0.75,
-          }}
-          src={rank.outline.image}
-          alt="Rank Outline"
-          style={{
-            zIndex: -1,
-            width: `${rank.outline.size * size}vw`,
-            translate: `${rank.outline.position[0] * size}vw ${
-              rank.outline.position[1] * size
-            }vw`,
-          }}
-        />
+            animate={{
+              opacity: 1,
+              scaleY: 1,
+            }}
+            transition={{
+              delay: delay + 0.75,
+            }}
+            src={rank.outline.image}
+            alt="Rank Outline"
+            style={{
+              zIndex: -1,
+              width: `${rank.outline.size * size}vw`,
+              translate: `${rank.outline.position[0] * size}vw ${
+                rank.outline.position[1] * size
+              }vw`,
+            }}
+          />
+        )}
         {rank.ribbon && (
           <motion.img
             initial={

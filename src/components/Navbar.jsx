@@ -11,6 +11,7 @@ function Nav() {
     { title: "puzzles", disabled: true },
     { title: "learn", disabled: true },
     { title: "records", disabled: true },
+    { title: "news", disabled: true },
   ];
   const [selectedTab, setSelectedTab] = useQueryState("tab");
   const [subTab, setSubTab] = useQueryState("subTab");

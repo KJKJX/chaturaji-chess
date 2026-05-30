@@ -4,7 +4,10 @@ import { AnimatePresence } from "motion/react";
 import Spinner from "../components/Spinner";
 import Inserter from "../components/Inserter";
 import Profile from "../components/Profile";
-import { convertEloToString } from "../data/functions";
+import {
+  convertEloToString,
+  convertStringToRankObject,
+} from "../data/functions";
 import { useQueryState } from "nuqs";
 const tabs = [
   {
@@ -29,7 +32,7 @@ function ProfilePage() {
   function handleOnClickDisplay(elo, matches) {
     setLoading(true);
     setTimeout(() => {
-      let rank = convertEloToString(elo);
+      let rank = convertStringToRankObject(convertEloToString(elo));
       setStats({
         level: (elo * matches) / 10000,
         elo: elo,
@@ -44,7 +47,7 @@ function ProfilePage() {
     if (localStorage.elo && localStorage.matches) {
       let elo = localStorage.elo;
       let matches = localStorage.matches;
-      let rank = convertEloToString(elo);
+      let rank = convertStringToRankObject(convertEloToString(elo));
       setStats({
         level: (elo * matches) / 10000,
         elo: elo,

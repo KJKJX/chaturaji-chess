@@ -41,4 +41,13 @@ export const tips = [
     elo: Infinity,
     id: 5,
   },
+  {
+    title:
+      "Forks make the knight a powerful piece. Sometimes, your rook might need to trade with it!",
+    type: "tip",
+    info: "...",
+    from: "Universoul_Crown",
+    elo: 2100,
+    id: 5,
+  },
 ];

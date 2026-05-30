@@ -1,24 +1,14 @@
-import { rankData } from "./rankData";
 import { ranks } from "./ranks";
 import { tips } from "./tips";
 export const convertEloToString = function (rank) {
-  const match = [...rankData]
-    .reverse()
-    .find((tier) => rank >= tier.requiredElo);
+  const match = [...ranks].reverse().find((tier) => rank >= tier.requiredElo);
   return match ? match.title : "unranked";
 };
 export const convertStringToRankObject = function (rankString) {
-  return rankData.find((dataRank) => dataRank.title === rankString);
+  return ranks.find((rank) => rank.title === rankString);
 };
-export const convertStringToImage = function (rankString) {
-  return ranks.find((rankImage) => rankString?.includes(rankImage.rank)) || "";
-};
-export const getNextRankObject = function (currentRankString) {
-  return (
-    rankData.at(
-      rankData.indexOf(convertStringToRankObject(currentRankString)) + 1
-    ) || rankData.at(-1)
-  );
+export const getNextRankObject = function (currentRankObj) {
+  return ranks.at(ranks.indexOf(currentRankObj) + 1) || ranks.at(-1);
 };
 export const getRandomTips = function (amount) {
   if (typeof amount !== "number") {

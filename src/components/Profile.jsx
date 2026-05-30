@@ -2,15 +2,13 @@ import { motion } from "motion/react";
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import {
   convertEloToString,
-  convertStringToImage,
   getNextRankObject,
   getRandomTips,
 } from "../data/functions";
 import pkg from "react-countup";
 import Rank from "./Rank";
-import { ranks } from "../data/ranks";
 import { useEffect } from "react";
-import { rankData } from "../data/rankData";
+import { ranks } from "../data/ranks";
 const CountUp = pkg.CountUp?.default || pkg.default;
 function calculateRequirements(stats) {
   // 1. Calculate current XP out of 100 using your exact logic
@@ -65,7 +63,7 @@ function Profile({ stats }) {
             size={convertEloToString(stats.elo).includes("emerald") ? 0.8 : 0.9}
             animated={true}
             delay={2}
-            rank={convertStringToImage(stats.rank)}
+            rank={stats.rank}
           />
           <motion.p
             initial={{ opacity: 0, scale: 0.3 }}
@@ -73,7 +71,7 @@ function Profile({ stats }) {
             transition={{ delay: 3, type: "spring", damping: 7, bounce: 1 }}
             className="text-white/80 text-[2vw] font-bold capitalize mt-[1.5vw]"
           >
-            {stats.rank}
+            {stats.rank.title}
           </motion.p>
 
           <motion.span
@@ -200,7 +198,7 @@ function Profile({ stats }) {
           }}
           className="*:text-[1.2vw] *:text-white/70 flex flex-col *:text-left *:before:content-['-'] *:before:transform *:before:mr-[0.5vw] mt-[0.2vw] mx-auto w-9/10 h-4/5  overflow-y-scroll"
         >
-          {stats.rank !== rankData.at(-1).title && (
+          {stats.rank !== ranks.at(-1).title && (
             <li>
               <span className="capitalize text-white/90 !font-[900]">
                 {nextRank.title}

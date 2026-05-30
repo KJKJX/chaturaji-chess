@@ -1,6 +1,7 @@
 import React from "react";
 import Main from "../components/Main";
 import { motion } from "motion/react";
+import Tab from "../components/Tab";
 
 function HomePage() {
   return (
@@ -30,6 +31,20 @@ function HomePage() {
           </a>
           ! Click the Profile tab for the main feature.)
         </motion.p>
+        <motion.div className="flex flex-row justify-evenly w-full h-fit">
+          <a
+            target="_blank"
+            href="https://www.chess.com/variants/chaturaji/lobby"
+          >
+            <Tab className="!text-[0.9vw] w-[10vw]">Play Chaturaji!</Tab>
+          </a>
+          <a
+            target="_blank"
+            href="https://www.chess.com/club/chaturaji-chess-team"
+          >
+            <Tab className="!text-[0.9vw] w-[10vw]">Chaturaji Club</Tab>
+          </a>
+        </motion.div>
       </div>
     </Main>
   );
