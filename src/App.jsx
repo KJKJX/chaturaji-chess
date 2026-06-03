@@ -11,6 +11,7 @@ import tile from "./imgs/chess_tile.png";
 import ProfilePage from "./pages/ProfilePage";
 import { useQueryState } from "nuqs";
 import HomePage from "./pages/HomePage";
+import LearnPage from "./pages/LearnPage";
 function App() {
   const [tab] = useQueryState("tab");
   return (
@@ -28,6 +29,7 @@ function App() {
       <AnimatePresence mode="wait">
         {!tab && <HomePage key="home" />}
         {tab === "profile" && <ProfilePage key="profile" />}
+        {tab === "learn" && <LearnPage key="learn" />}
       </AnimatePresence>
       <Footer />
     </div>

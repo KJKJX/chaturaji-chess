@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Tab from "./Tab";
-function Main({ tabs, loading, onTabClick, selectedTab, children }) {
+function Main({ tabs, loading, onTabClick, selectedTab, className, children }) {
   return loading ? null : (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="scale-125 h-[30vw] w-[60vw] bg-black/10 rounded-[1vw] border-[0.1vw] border-white/20 mt-auto flex flex-col items-center text-white py-[2vw] overflow-clip"
+      className={`${className} scale-125 max-h-[60vh] w-[60vw] bg-black/10 rounded-[1vw] border-[0.1vw] border-white/20 mt-auto flex flex-col items-center text-white py-[2vw] overflow-clip`}
     >
       {tabs && (
         <div className="border-b-[0.1vw] border-white/20 pb-[2vw] w-full mb-[1vw]">

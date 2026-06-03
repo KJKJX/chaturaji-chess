@@ -8,8 +8,8 @@ import Tab from "./Tab";
 function Nav() {
   const tabs = [
     { title: "profile" },
+    { title: "learn" },
     { title: "puzzles", disabled: true },
-    { title: "learn", disabled: true },
     { title: "records", disabled: true },
     { title: "news", disabled: true },
   ];

@@ -5,7 +5,7 @@ import Tab from "../components/Tab";
 
 function HomePage() {
   return (
-    <Main>
+    <Main className={"!h-[30vw]"}>
       <div className="h-full w-full items-center justify-center flex flex-col">
         <motion.p
           initial={{ opacity: 0, scale: 0 }}
@@ -29,9 +29,24 @@ function HomePage() {
           >
             here
           </a>
-          ! Click the Profile tab for the main feature.)
+          ! Click the Profile tab for the main feature.) <br /> 🎉 Added 1st
+          opening in Learn tab!
         </motion.p>
-        <motion.div className="flex flex-row justify-evenly w-full h-fit">
+        <motion.div
+          initial={{
+            y: 20,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            delay: 2,
+            type: "spring",
+          }}
+          className="flex flex-row justify-evenly w-full h-fit"
+        >
           <a
             target="_blank"
             href="https://www.chess.com/variants/chaturaji/lobby"

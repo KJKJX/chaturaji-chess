@@ -64,6 +64,7 @@ function ProfilePage() {
       tabs={tabs}
       selectedTab={selectedTab}
       onTabClick={(tab) => setSelectedTab(tab)}
+      className={"!h-[30vw]"}
     >
       <AnimatePresence mode="wait">
         {loading && <Spinner key="spinner" />}

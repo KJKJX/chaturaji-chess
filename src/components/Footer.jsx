@@ -15,6 +15,7 @@ function Footer() {
         </a>{" "}
         All code and assets were made by{" "}
         <a
+          target="_blank"
           className="hover:text-white/90 duration-100"
           href="https://www.chess.com/member/universoul_crown"
         >
@@ -22,10 +23,19 @@ function Footer() {
         </a>{" "}
         and{" "}
         <a
+          target="_blank"
           className="hover:text-white/90 duration-100"
           href="https://www.chess.com/member/sxbzer0"
         >
-          SxbZer0.
+          SxbZer0
+        </a>{" "}
+        and{" "}
+        <a
+          target="_blank"
+          className="hover:text-white/90 duration-100"
+          href="https://www.chess.com/member/is-this-allowed"
+        >
+          is-this-allowed.
         </a>{" "}
         Version {version}. Updated last on {lastUpdate}.
       </p>
