@@ -16,6 +16,13 @@ import emerald_outline from "../imgs/emerald/outline.svg";
 import emerald_piece from "../imgs/emerald/piece.svg";
 import emerald_ribbon from "../imgs/emerald/ribbon.svg";
 import emerald_wings from "../imgs/emerald/wings.svg";
+
+import ruby_main from "../imgs/ruby/main.svg";
+import ruby_outline from "../imgs/ruby/outline.svg";
+import ruby_piece from "../imgs/ruby/piece.svg";
+import ruby_ribbon from "../imgs/ruby/ribbon.svg";
+import ruby_wings from "../imgs/ruby/wings.svg";
+import ruby_crown from "../imgs/ruby/crown.svg";
 const silver = {
   main: {
     image: silver_main,
@@ -102,6 +109,38 @@ const emerald = {
     size: 21,
   },
 };
+const ruby = {
+  main: {
+    image: ruby_main,
+    position: [0, 0],
+    size: 11.5,
+  },
+  outline: {
+    image: ruby_outline,
+    position: [0, -4],
+    size: 16,
+  },
+  piece: {
+    image: ruby_piece,
+    position: [0, 1.5],
+    size: 3.6,
+  },
+  ribbon: {
+    image: ruby_ribbon,
+    position: [0, 6.5],
+    size: 5.5,
+  },
+  wings: {
+    image: ruby_wings,
+    position: [0, 0.2],
+    size: 15.5,
+  },
+  crown: {
+    image: ruby_crown,
+    position: [0, -3.1],
+    size: 6,
+  },
+};
 export const ranks = [
   {
     title: "silver I",
@@ -172,11 +211,31 @@ export const ranks = [
     title: "emerald III",
     requiredElo: 2416.66,
     ...emerald,
+    height: 10,
   },
-  { requiredElo: 2500, title: "grandmaster I" },
-  { requiredElo: 2583.33, title: "grandmaster II" },
-  { requiredElo: 2666.66, title: "grandmaster III" },
-  { requiredElo: 2750, title: "elite I" },
-  { requiredElo: 2850, title: "elite II" },
-  { requiredElo: 3000, title: "elite III" },
+  {
+    requiredElo: 2500,
+    title: "ruby I",
+    main: ruby.main,
+    piece: ruby.piece,
+    crown: ruby.crown,
+    ribbon: ruby.ribbon,
+    height: 11,
+    shiftY: 2.5,
+  },
+  {
+    requiredElo: 2583.33,
+    title: "ruby II",
+    main: ruby.main,
+    piece: ruby.piece,
+    wings: ruby.wings,
+    ribbon: ruby.ribbon,
+    crown: ruby.crown,
+    shiftY: 2.5,
+    height: 11,
+  },
+  { requiredElo: 2666.66, title: "ruby III", ...ruby, shiftY: 3, height: 11.5 },
+  { requiredElo: 2750, title: "grandmaster I" },
+  { requiredElo: 2850, title: "grandmaster II" },
+  { requiredElo: 3000, title: "grandmaster III" },
 ];

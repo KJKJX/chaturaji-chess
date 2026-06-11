@@ -5,7 +5,10 @@ function Rank({ rank, size = 1, animated = false, delay = 0 }) {
     rank && (
       <div
         className="grid *:col-start-1 *:row-start-1 *:mx-auto"
-        // style={{ height: `${15 * size}vw`, width: `${15 * size}vw` }}
+        style={{
+          height: `${rank.height || "fit-content"}vw`,
+          translate: `0vw ${rank.shiftY || 0}vw`,
+        }}
       >
         <motion.img
           initial={
@@ -22,7 +25,7 @@ function Rank({ rank, size = 1, animated = false, delay = 0 }) {
           src={rank.main.image}
           alt="Main Rank"
           style={{
-            zIndex: 0,
+            zIndex: 1,
             width: `${rank.main.size * size}vw`,
             translate: `${rank.main.position[0] * size}vw ${
               rank.main.position[1] * size
@@ -99,7 +102,7 @@ function Rank({ rank, size = 1, animated = false, delay = 0 }) {
             src={rank.ribbon.image}
             alt="Rank Ribbon"
             style={{
-              zIndex: -2,
+              zIndex: 0,
               width: `${rank.ribbon.size * size}vw`,
               translate: `${rank.ribbon.position[0] * size}vw ${
                 rank.ribbon.position[1] * size
@@ -131,6 +134,34 @@ function Rank({ rank, size = 1, animated = false, delay = 0 }) {
               width: `${rank.wings.size * size}vw`,
               translate: `${rank.wings.position[0] * size}vw ${
                 rank.wings.position[1] * size
+              }vw`,
+            }}
+          />
+        )}
+        {rank.crown && (
+          <motion.img
+            initial={
+              animated && {
+                opacity: 0,
+                y: -25,
+              }
+            }
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: delay + 1.5,
+              type: "spring",
+              stiffness: 25,
+            }}
+            src={rank.crown.image}
+            alt="Rank Crown"
+            style={{
+              zIndex: -1,
+              width: `${rank.crown.size * size}vw`,
+              translate: `${rank.crown.position[0] * size}vw ${
+                rank.crown.position[1] * size
               }vw`,
             }}
           />
