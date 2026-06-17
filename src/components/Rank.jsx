@@ -10,28 +10,30 @@ function Rank({ rank, size = 1, animated = false, delay = 0 }) {
           translate: `0vw ${rank.shiftY || 0}vw`,
         }}
       >
-        <motion.img
-          initial={
-            animated && {
-              opacity: 0,
+        {rank.main && (
+          <motion.img
+            initial={
+              animated && {
+                opacity: 0,
+              }
             }
-          }
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            delay: delay,
-          }}
-          src={rank.main.image}
-          alt="Main Rank"
-          style={{
-            zIndex: 1,
-            width: `${rank.main.size * size}vw`,
-            translate: `${rank.main.position[0] * size}vw ${
-              rank.main.position[1] * size
-            }vw`,
-          }}
-        />
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: delay,
+            }}
+            src={rank.main.image}
+            alt="Main Rank"
+            style={{
+              zIndex: 1,
+              width: `${rank.main.size * size}vw`,
+              translate: `${rank.main.position[0] * size}vw ${
+                rank.main.position[1] * size
+              }vw`,
+            }}
+          />
+        )}
         {rank.piece && (
           <motion.img
             initial={

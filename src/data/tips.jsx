@@ -50,4 +50,13 @@ export const tips = [
     elo: 2100,
     id: 5,
   },
+  {
+    title:
+      "If you have a 2-square gap between your king and an opposing knight, you won't be chacked for a while!",
+    type: "tip",
+    info: "...",
+    from: "Universoul_Crown",
+    elo: 2100,
+    id: 6,
+  },
 ];

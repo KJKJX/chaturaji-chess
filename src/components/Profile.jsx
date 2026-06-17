@@ -198,7 +198,7 @@ function Profile({ stats }) {
           }}
           className="*:text-[1.2vw] *:text-white/70 flex flex-col *:text-left *:before:content-['-'] *:before:transform *:before:mr-[0.5vw] mt-[0.2vw] mx-auto w-9/10 h-4/5  overflow-y-scroll"
         >
-          {stats.rank !== ranks.at(-1).title && (
+          {stats.rank !== ranks.at(-1) && (
             <li>
               <span className="capitalize text-white/90 !font-[900]">
                 {nextRank.title}

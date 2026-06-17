@@ -13,7 +13,11 @@ let tabs = [
     disabled: false,
   },
   {
-    title: "tactics",
+    title: "tips",
+    disabled: true,
+  },
+  {
+    title: "guides",
     disabled: true,
   },
 ];

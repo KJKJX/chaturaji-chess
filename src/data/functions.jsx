@@ -2,7 +2,7 @@ import { ranks } from "./ranks";
 import { tips } from "./tips";
 export const convertEloToString = function (rank) {
   const match = [...ranks].reverse().find((tier) => rank >= tier.requiredElo);
-  return match ? match.title : "unranked";
+  return match ? match.title : ranks[0].title;
 };
 export const convertStringToRankObject = function (rankString) {
   return ranks.find((rank) => rank.title === rankString);

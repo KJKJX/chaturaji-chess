@@ -20,14 +20,14 @@ const board = [
   "red.pawn4.d2",
 
   // === GREEN PLAYER (North-West Corner) ===
-  "green.boat1.a8",
-  "green.knight1.a7",
-  "green.bishop.a6",
-  "green.king1.a5",
-  "green.pawn1.b8",
-  "green.pawn2.b7",
-  "green.pawn3.b6",
-  "green.pawn4.b5",
+  "blue.boat1.a8",
+  "blue.knight1.a7",
+  "blue.bishop.a6",
+  "blue.king1.a5",
+  "blue.pawn1.b8",
+  "blue.pawn2.b7",
+  "blue.pawn3.b6",
+  "blue.pawn4.b5",
 
   // === YELLOW PLAYER (North-East Corner) ===
   "yellow.boat1.h8",
@@ -40,14 +40,14 @@ const board = [
   "yellow.pawn4.e7",
 
   // === BLACK/BLUE PLAYER (South-East Corner) ===
-  "blue.boat1.h1",
-  "blue.knight1.h2",
-  "blue.bishop.h3",
-  "blue.king1.h4",
-  "blue.pawn1.g1",
-  "blue.pawn2.g2",
-  "blue.pawn3.g3",
-  "blue.pawn4.g4",
+  "green.boat1.h1",
+  "green.knight1.h2",
+  "green.bishop.h3",
+  "green.king1.h4",
+  "green.pawn1.g1",
+  "green.pawn2.g2",
+  "green.pawn3.g3",
+  "green.pawn4.g4",
 ];
 function Board({ moves, prevMoves, currentMove, className, size = 25 }) {
   const [changeableBoard, setChangeableBoard] = useState(

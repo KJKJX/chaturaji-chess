@@ -27,7 +27,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
       }}
       className="h-[30vw] flex flex-row w-full  overflow-scroll"
     >
-      <div className="w-1/3 border-white/20 flex flex-col items-center mx-[2vw] mt-[0.8vw]">
+      <div className="w-1/3 border-white/20 flex flex-col items-center mx-[2vw] mt-[0.8vw] overflow-scroll">
         <i className="text-white/80 text-[1.4vw] !font-[900] capitalize w-full">
           {opening.title}
         </i>
