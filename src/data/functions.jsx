@@ -23,6 +23,5 @@ export const getRandomTips = function (amount) {
       tipAmount -= 1;
     }
   }
-  console.log(randomTips);
   return randomTips;
 };
