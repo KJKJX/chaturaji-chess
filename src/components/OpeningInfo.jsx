@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Board from "./Board";
 import Tab from "./Tab";
 import { motion } from "motion/react";
+import SectionReader from "./SectionReader";
 function OpeningInfo({ opening, setSelectedTab }) {
   if (!opening?.moves) {
     return null;
@@ -36,8 +37,8 @@ function OpeningInfo({ opening, setSelectedTab }) {
           {totalMoves <= 3
             ? "short"
             : totalMoves <= 6
-            ? "medium-length"
-            : "long"}
+              ? "medium-length"
+              : "long"}
           ; {opening.tags.map((tag) => tag)}
         </i>
         <div className="flex flex-row  *:text-[1vw] *:h-fit items-center my-[0.5vw] *:p-[0.3vw]">
@@ -77,9 +78,10 @@ function OpeningInfo({ opening, setSelectedTab }) {
             {"►"}
           </p>
         </div>
-        <p className="text-left text-white/70 text-[1vw] w-full">
+        {/* <p className="text-left text-white/70 text-[1vw] w-full">
           {opening.description}
-        </p>
+        </p> */}
+        <SectionReader sections={opening.sections} />
         <a
           href={opening.link}
           target="_blank"

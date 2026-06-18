@@ -20,7 +20,7 @@ function OpeningsList({ onOpeningPreviewClick }) {
       exit={{
         opacity: 0,
       }}
-      className="h-[30vw] w-full flex flex-col overflow-scroll"
+      className="h-full w-full flex flex-col overflow-scroll"
     >
       <motion.i
         initial={{ opacity: 0, filter: "blur(5px)" }}
@@ -30,7 +30,7 @@ function OpeningsList({ onOpeningPreviewClick }) {
       >
         Openings Collection
       </motion.i>
-      <div className="flex flex-row flex-wrap gap-[2vw] w-full mt-[1vw] p-[1vw] justify-evenly overflow-scroll h-[20vw]">
+      <div className="flex flex-row flex-wrap gap-[2vw] w-full px-[1vw] justify-evenly overflow-scroll h-full">
         {openings.map((opening, i) => (
           <OpeningPreview
             opening={opening}

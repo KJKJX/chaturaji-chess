@@ -28,10 +28,10 @@ function LearnPage() {
   function handleOnOpeningPreviewClick(opening) {
     setLoading(true);
     setCurrentOpening(opening);
-    setTimeout(() => {
-      setLoading(false);
-      setSelectedTab("opening");
-    }, 1500 + Math.random() * 1500);
+    // setTimeout(() => {
+    setLoading(false);
+    setSelectedTab("opening");
+    // }, 1500 + Math.random() * 1500);
   }
   return (
     <Main
