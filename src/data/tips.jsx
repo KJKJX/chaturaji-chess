@@ -52,7 +52,7 @@ export const tips = [
   },
   {
     title:
-      "If you have a 2-square gap between your king and an opposing knight, you won't be chacked for a while!",
+      "If you have a 2-square gap between your king and an opposing knight, you won't be checked for a while!",
     type: "tip",
     info: "...",
     from: "Universoul_Crown",
