@@ -7,6 +7,9 @@ import Board from "../components/Board";
 import OpeningInfo from "../components/OpeningInfo";
 import { openings } from "../data/openings";
 import OpeningsList from "../components/OpeningsList";
+import Article from "../components/Article";
+import { guides } from "../data/guides";
+import GuidesList from "../components/GuidesList";
 let tabs = [
   {
     title: "openings",
@@ -18,20 +21,27 @@ let tabs = [
   },
   {
     title: "guides",
-    disabled: true,
+    disabled: false,
   },
 ];
 function LearnPage() {
-  const [selectedTab, setSelectedTab] = useState("openings");
+  const [selectedTab, setSelectedTab] = useState("guide");
   const [loading, setLoading] = useState(false);
   const [currentOpening, setCurrentOpening] = useState(null);
+  const [currentGuide, setCurrentGuide] = useState(guides.at(0));
   function handleOnOpeningPreviewClick(opening) {
-    setLoading(true);
     setCurrentOpening(opening);
     // setTimeout(() => {
     setLoading(false);
     setSelectedTab("opening");
     // }, 1500 + Math.random() * 1500);
+  }
+  function handleOnGuidePreviewClick(guide) {
+    console.log(guide);
+    setCurrentGuide(guide);
+    // setTimeout(() => {
+    setLoading(false);
+    setSelectedTab("guide");
   }
   return (
     <Main
@@ -53,6 +63,20 @@ function LearnPage() {
           <OpeningsList
             key="opening_list"
             onOpeningPreviewClick={handleOnOpeningPreviewClick}
+          />
+        )}
+        {selectedTab === "guide" && !loading && (
+          <Article
+            key="guide"
+            article={currentGuide}
+            setSelectedTab={setSelectedTab}
+            backTab={"guides"}
+          />
+        )}
+        {selectedTab === "guides" && !loading && (
+          <GuidesList
+            key="guides"
+            onGuidePreviewClick={handleOnGuidePreviewClick}
           />
         )}
       </AnimatePresence>

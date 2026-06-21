@@ -36,15 +36,15 @@ function SectionReader({ sections, className }) {
             <>
               {section?.list.map((item) => (
                 <p
-                  className={
-                    " text-left text-white/70 text-[0.9vw] before:content-['•'] before:transform before:mr-[0.4vw] indent-[0.6vw]"
-                  }
+                  className={`${section.className} text-left text-white/70 text-[0.9vw] before:content-['•'] before:transform before:mr-[0.4vw] indent-[0.6vw]`}
                 >
                   {item}
                 </p>
               ))}
             </>
           );
+        } else if (section.type === "image") {
+          return <img src={section.image} className={section.className} />;
         }
       })}
     </div>

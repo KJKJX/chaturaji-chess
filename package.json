@@ -1,8 +1,8 @@
 {
   "name": "chaturaji-chess-website",
   "private": true,
-  "version": "1.6.5",
-  "lastUpdate": "6/20/2026",
+  "version": "1.7.0",
+  "lastUpdate": "6/21/2026",
   "type": "module",
   "scripts": {
     "dev": "vite",
