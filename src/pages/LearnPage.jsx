@@ -25,10 +25,10 @@ let tabs = [
   },
 ];
 function LearnPage() {
-  const [selectedTab, setSelectedTab] = useState("guide");
+  const [selectedTab, setSelectedTab] = useState("openings");
   const [loading, setLoading] = useState(false);
   const [currentOpening, setCurrentOpening] = useState(null);
-  const [currentGuide, setCurrentGuide] = useState(guides.at(0));
+  const [currentGuide, setCurrentGuide] = useState(null);
   function handleOnOpeningPreviewClick(opening) {
     setCurrentOpening(opening);
     // setTimeout(() => {
