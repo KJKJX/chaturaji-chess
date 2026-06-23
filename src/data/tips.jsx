@@ -1,11 +1,10 @@
-export const tips = [
+let initTips = [
   {
     title: "If you move first, start by pushing your king's pawn.",
     type: "opening",
     info: "...",
     from: "is-this-allowed",
-    elo: Infinity,
-    id: 1,
+    elo: 0,
   },
   {
     title:
@@ -13,24 +12,21 @@ export const tips = [
     type: "tip",
     info: "...",
     from: "is-this-allowed",
-    elo: Infinity,
-    id: 2,
+    elo: 0,
   },
   {
     title: "Always keep your king in a safe, defendable position.",
     type: "tip",
     info: "...",
     from: "is-this-allowed",
-    elo: Infinity,
-    id: 3,
+    elo: 0,
   },
   {
     title: "Don't trade too much! You might end up with too little material.",
     type: "mistake",
     info: "...",
     from: "is-this-allowed",
-    elo: 2350,
-    id: 4,
+    elo: 0,
   },
   {
     title:
@@ -38,8 +34,7 @@ export const tips = [
     type: "mistake",
     info: "...",
     from: "is-this-allowed",
-    elo: Infinity,
-    id: 5,
+    elo: 0,
   },
   {
     title:
@@ -47,8 +42,7 @@ export const tips = [
     type: "tip",
     info: "...",
     from: "Universoul_Crown",
-    elo: 2100,
-    id: 5,
+    elo: 2000,
   },
   {
     title:
@@ -56,7 +50,16 @@ export const tips = [
     type: "tip",
     info: "...",
     from: "Universoul_Crown",
-    elo: 2100,
-    id: 6,
+    elo: 0,
+  },
+  {
+    title: "Remember the 2-loss rule; If you lose twice, take a break!",
+    type: "tip",
+    info: "...",
+    from: "Universoul_Crown",
+    elo: 0,
   },
 ];
+initTips.map((tip, i) => (tip.id = i));
+
+export const tips = initTips;

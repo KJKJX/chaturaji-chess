@@ -10,6 +10,7 @@ import OpeningsList from "../components/OpeningsList";
 import Article from "../components/Article";
 import { guides } from "../data/guides";
 import GuidesList from "../components/GuidesList";
+import TipsList from "../components/TipsList";
 let tabs = [
   {
     title: "openings",
@@ -17,7 +18,7 @@ let tabs = [
   },
   {
     title: "tips",
-    disabled: true,
+    disabled: false,
   },
   {
     title: "guides",
@@ -79,6 +80,7 @@ function LearnPage() {
             onGuidePreviewClick={handleOnGuidePreviewClick}
           />
         )}
+        {selectedTab === "tips" && !loading && <TipsList key="tips" />}
       </AnimatePresence>
     </Main>
   );

@@ -29,8 +29,7 @@ function HomePage() {
           >
             here
           </a>
-          ! Click the Profile tab for the main feature.) <br /> 🎉 Added 1st
-          opening in Learn tab!
+          ! Click the Profile tab for the main feature.)
         </motion.p>
         <motion.div
           initial={{
