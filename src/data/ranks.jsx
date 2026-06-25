@@ -23,6 +23,13 @@ import ruby_piece from "../imgs/ruby/piece.svg";
 import ruby_ribbon from "../imgs/ruby/ribbon.svg";
 import ruby_wings from "../imgs/ruby/wings.svg";
 import ruby_crown from "../imgs/ruby/crown.svg";
+
+import diamond_main from "../imgs/diamond/main.svg";
+import diamond_outline from "../imgs/diamond/outline.svg";
+import diamond_piece from "../imgs/diamond/piece.svg";
+import diamond_ribbon from "../imgs/diamond/ribbon.svg";
+import diamond_wings from "../imgs/diamond/wings.svg";
+import diamond_crown from "../imgs/diamond/crown.svg";
 const silver = {
   main: {
     image: silver_main,
@@ -141,6 +148,38 @@ const ruby = {
     size: 6,
   },
 };
+const diamond = {
+  main: {
+    image: diamond_main,
+    position: [0, 0],
+    size: 10,
+  },
+  outline: {
+    image: diamond_outline,
+    position: [0, -4.25],
+    size: 21.5,
+  },
+  piece: {
+    image: diamond_piece,
+    position: [0, 2.5],
+    size: 5,
+  },
+  ribbon: {
+    image: diamond_ribbon,
+    position: [0, 8],
+    size: 10.5,
+  },
+  wings: {
+    image: diamond_wings,
+    position: [0, 0.2],
+    size: 21.75,
+  },
+  crown: {
+    image: diamond_crown,
+    position: [0, -3.75],
+    size: 7.75,
+  },
+};
 export const ranks = [
   {
     title: "silver I",
@@ -235,7 +274,32 @@ export const ranks = [
     height: 11,
   },
   { requiredElo: 2666.66, title: "ruby III", ...ruby, shiftY: 3, height: 11.5 },
-  { requiredElo: 2750, title: "grandmaster I" },
-  { requiredElo: 2850, title: "grandmaster II" },
-  { requiredElo: 3000, title: "grandmaster III" },
+  {
+    requiredElo: 2750,
+    title: "diamond I",
+    main: diamond.main,
+    piece: diamond.piece,
+    crown: diamond.crown,
+    wings: diamond.wings,
+    shiftY: 3,
+    height: 11.5,
+  },
+  {
+    requiredElo: 2850,
+    title: "diamond II",
+    main: diamond.main,
+    piece: diamond.piece,
+    wings: diamond.wings,
+    ribbon: diamond.ribbon,
+    crown: diamond.crown,
+    shiftY: 3,
+    height: 11.5,
+  },
+  {
+    requiredElo: 3000,
+    title: "diamond III",
+    ...diamond,
+    shiftY: 3,
+    height: 11.5,
+  },
 ];

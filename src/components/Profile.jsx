@@ -60,7 +60,12 @@ function Profile({ stats }) {
 
         <div className="flex flex-col items-center">
           <Rank
-            size={convertEloToString(stats.elo).includes("emerald") ? 0.8 : 0.9}
+            size={
+              convertEloToString(stats.elo).includes("emerald") ||
+              convertEloToString(stats.elo).includes("diamond")
+                ? 0.8
+                : 0.9
+            }
             animated={true}
             delay={2}
             rank={stats.rank}
