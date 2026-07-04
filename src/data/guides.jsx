@@ -6,7 +6,7 @@ export const guides = [
     img: endgame_cooperation_guide,
     link: "https://www.chess.com/clubs/forum/view/a-guide-to-chaturaji-endgame-cooperation",
     from: "IHaveTheSauce",
-    date: "6/12/26",
+    date: "2026-06-12T20:00:00.000Z",
     minRead: 6,
     sections: [
       {

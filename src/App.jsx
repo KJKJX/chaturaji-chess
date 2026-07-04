@@ -12,8 +12,16 @@ import ProfilePage from "./pages/ProfilePage";
 import { useQueryState } from "nuqs";
 import HomePage from "./pages/HomePage";
 import LearnPage from "./pages/LearnPage";
+import NewsPage from "./pages/NewsPage";
 function App() {
   const [tab] = useQueryState("tab");
+  const [lastVisitedNews, setLastVisitedNews] = useState(
+    localStorage.lastVisitedNews || "1926-06-30T01:11:07.487Z",
+  );
+  const handleUpdateLastVisitedNews = () => {
+    localStorage.lastVisitedNews = new Date().toISOString();
+    setLastVisitedNews(localStorage.lastVisitedNews);
+  };
   return (
     <div className="h-screen w-full bg-gray-900 flex flex-col items-center">
       <div
@@ -25,11 +33,17 @@ function App() {
           opacity: 0.1,
         }}
       />
-      <Nav />
+      <Nav lastVisitedNews={lastVisitedNews} />
       <AnimatePresence mode="wait">
         {!tab && <HomePage key="home" />}
         {tab === "profile" && <ProfilePage key="profile" />}
         {tab === "learn" && <LearnPage key="learn" />}
+        {tab === "news" && (
+          <NewsPage
+            key="news"
+            updateLastVisited={handleUpdateLastVisitedNews}
+          />
+        )}
       </AnimatePresence>
       <Footer />
     </div>

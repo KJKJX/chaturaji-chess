@@ -59,6 +59,14 @@ let initTips = [
     from: "Universoul_Crown",
     elo: 0,
   },
+  {
+    title:
+      "Don't trade pawns in the endgame! Instead, focus on promoting them to rooks.",
+    type: "tip",
+    info: "...",
+    from: "Universoul_Crown",
+    elo: 0,
+  },
 ];
 initTips.map((tip, i) => (tip.id = i));
 

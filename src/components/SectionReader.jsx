@@ -45,6 +45,18 @@ function SectionReader({ sections, className }) {
           );
         } else if (section.type === "image") {
           return <img src={section.image} className={section.className} />;
+        } else if (section.type === "link") {
+          return (
+            <>
+              <a
+                className="text-[1.1vw] text-white/60 hover:text-white/80 duration-150"
+                target="_blank"
+                href={section.link}
+              >
+                {section.text}
+              </a>
+            </>
+          );
         }
       })}
     </div>

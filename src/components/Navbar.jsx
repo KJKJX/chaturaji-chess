@@ -1,17 +1,23 @@
 import React from "react";
-import boat from "../../public/favicon.svg";
+import boat from "../imgs/favicon.svg";
 import { motion } from "motion/react";
 import { clearSearchParams, setSearchParams } from "../functions/urlFunctions";
 import { useQueryState } from "nuqs";
 import Tab from "./Tab";
+import { news } from "../data/news";
 
-function Nav() {
+function Nav({ lastVisitedNews }) {
+  const notifyNews =
+    new Date(
+      [...news].sort((x, y) => new Date(y.date) - new Date(x.date))[0].date,
+    ) > new Date(lastVisitedNews);
+
   const tabs = [
     { title: "profile" },
     { title: "learn" },
     { title: "puzzles", disabled: true },
     { title: "records", disabled: true },
-    { title: "news", disabled: true },
+    { title: "news", notify: notifyNews },
   ];
   const [selectedTab, setSelectedTab] = useQueryState("tab");
   const [subTab, setSubTab] = useQueryState("subTab");
@@ -29,6 +35,7 @@ function Nav() {
           <Tab
             active={selectedTab === mappedTab.title}
             disabled={mappedTab.disabled}
+            notify={mappedTab.notify}
             onClick={() => {
               if (mappedTab.title === selectedTab) {
                 setSelectedTab(null);
