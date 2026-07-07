@@ -5,12 +5,15 @@ import { clearSearchParams, setSearchParams } from "../functions/urlFunctions";
 import { useQueryState } from "nuqs";
 import Tab from "./Tab";
 import { news } from "../data/news";
+import { currentQuote, outstandingGame } from "../data/weeklyData";
 
 function Nav({ lastVisitedNews }) {
   const notifyNews =
     new Date(
       [...news].sort((x, y) => new Date(y.date) - new Date(x.date))[0].date,
-    ) > new Date(lastVisitedNews);
+    ) > new Date(lastVisitedNews) ||
+    new Date(lastVisitedNews) < new Date(currentQuote.date) ||
+    new Date(lastVisitedNews) < new Date(outstandingGame.date);
 
   const tabs = [
     { title: "profile" },

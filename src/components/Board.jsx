@@ -8,7 +8,7 @@ import ChessPiece from "../components/ChessPiece";
 import Tab from "./Tab";
 import { motion } from "motion/react";
 import { useEffect } from "react";
-const board = [
+let baseBoard = [
   // === RED PLAYER (South-West Corner) ===
   "red.boat1.a1",
   "red.knight1.b1",
@@ -49,9 +49,17 @@ const board = [
   "green.pawn3.g3",
   "green.pawn4.g4",
 ];
-function Board({ moves, prevMoves, currentMove, className, size = 25 }) {
+function Board({
+  moves,
+  newBoard,
+  prevMoves,
+  currentMove,
+  className,
+  size = 25,
+}) {
+  const [board] = useState(newBoard || baseBoard);
   const [changeableBoard, setChangeableBoard] = useState(
-    JSON.parse(JSON.stringify([...board]))
+    JSON.parse(JSON.stringify([...board])),
   );
   const prevCurrentMove = useRef(currentMove);
   useEffect(() => {
@@ -96,11 +104,11 @@ function Board({ moves, prevMoves, currentMove, className, size = 25 }) {
                 ? "bg-gray-300"
                 : "bg-gray-400"
               : i % 2 === 0
-              ? "bg-gray-400"
-              : "bg-gray-300",
+                ? "bg-gray-400"
+                : "bg-gray-300",
         })).map((square) => (
           <div
-            className={`h-full w-full  ${square.color} border-black bg-clip-padding`}
+            className={`h-full w-full ${square.color} border-black bg-clip-padding`}
             style={{
               gridRow: square.row + 1,
               gridColumn: square.col + 1,

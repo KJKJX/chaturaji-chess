@@ -67,6 +67,38 @@ let initTips = [
     from: "Universoul_Crown",
     elo: 0,
   },
+  {
+    title:
+      "Better safe than sorry! Don't have too many trades going on simultaneously.",
+    type: "tip",
+    info: "...",
+    from: "Taran0915",
+    elo: 0,
+  },
+  {
+    title:
+      "Be careful having a knight in a corner! It may get stuck with no option but to be lost.",
+    type: "tip",
+    info: "...",
+    from: "SxbZer0",
+    elo: 0,
+  },
+  {
+    title:
+      "A double check is worth 1 point, and if you're lucky, a triple check is 5!",
+    type: "tip",
+    info: "...",
+    from: "SxbZer0",
+    elo: 0,
+  },
+  {
+    title:
+      "Watch professional games when coming back from a break. It will help un-rust your skills.",
+    type: "tip",
+    info: "...",
+    from: "SxbZer0",
+    elo: 0,
+  },
 ];
 initTips.map((tip, i) => (tip.id = i));
 

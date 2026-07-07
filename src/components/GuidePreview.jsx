@@ -1,5 +1,4 @@
 import React from "react";
-
 import { motion } from "motion/react";
 function GuidePreview({ guide, i, onClick }) {
   return (
@@ -26,7 +25,8 @@ function GuidePreview({ guide, i, onClick }) {
           {guide.title}
         </p>
         <i className="text-white/60 text-[0.9vw] !font-[900] capitalize w-full capitalize">
-          Created {guide.date} | {guide.minRead} Minute Read
+          Created {new Date(guide.date).toLocaleDateString()} | {guide.minRead}{" "}
+          Minute Read
         </i>
         <a
           className="text-[1vw] text-white/60 hover:text-white/80 mr-auto text-left italicize"

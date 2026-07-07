@@ -12,6 +12,7 @@ import { guides } from "../data/guides";
 import GuidesList from "../components/GuidesList";
 import TipsList from "../components/TipsList";
 import NewsList from "../components/NewsList";
+import WeeklyContent from "../components/WeeklyContent";
 let tabs = [
   {
     title: "news",
@@ -23,8 +24,8 @@ let tabs = [
     title: "announcements",
   },
   {
-    title: "Game of the Week",
-    disabled: true,
+    title: "chaturaji content",
+    // disabled: true,
   },
 ];
 function NewsPage({ updateLastVisited }) {
@@ -68,6 +69,7 @@ function NewsPage({ updateLastVisited }) {
             backTab={"news"}
           />
         )}
+        {selectedTab === "chaturaji content" && !loading && <WeeklyContent />}
       </AnimatePresence>
     </Main>
   );

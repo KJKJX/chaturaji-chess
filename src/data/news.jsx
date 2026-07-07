@@ -1,9 +1,17 @@
 export const news = [
   {
+    title: "Version 1.8.5!",
+    date: "2026-07-07T01:14:22.739Z",
+    type: "info",
+    tags: ["update", "more tabs"],
+    description:
+      "The Chaturaji Content tab has been added in News! Now you can see outstanding games and helpful quotes. New Tips have also been added. Thanks SxbZer0, agm2920, and Taran0915!",
+  },
+  {
     title: "News Launch",
     date: "2026-07-04T01:57:02.191Z",
     type: "info",
-    tags: ["informative", "update"],
+    tags: ["update"],
     description:
       "The News tab has been launched! Now you can get up-to-date with everything going on in the Chaturaji Chess Team club, learn about new updates, and see current events and announcements.",
   },
