@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 function Inserter({ onClickDisplay }) {
   const [elo, setElo] = useState(localStorage.elo || "");
   const [matches, setMatches] = useState(localStorage.matches || "");
+  const [peak, setPeak] = useState(localStorage.peak || "");
   return (
     <motion.div
       className="w-full flex flex-col items-center"
@@ -62,6 +63,33 @@ function Inserter({ onClickDisplay }) {
           />
         </motion.div>
         <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            damping: 10,
+            delay: 3,
+          }}
+          className="flex flex-col items-center space-y-[0.5vw] scale-110"
+        >
+          <p className="text-center text-white/70 text-[1.3vw]">Peak Elo</p>
+          <Input
+            type={"number"}
+            placeholder={"Peak"}
+            className={"w-[5vw] h-[2vw] rounded-[0.5vw] border-[0.1vw]"}
+            value={peak}
+            onChange={(e) => {
+              if (e.target.value < 0) {
+                setPeak("");
+                return;
+              }
+              setPeak(e.target.value);
+              localStorage.peak = e.target.value;
+            }}
+          />
+        </motion.div>
+
+        <motion.div
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
@@ -95,7 +123,7 @@ function Inserter({ onClickDisplay }) {
         animate={{ opacity: 1, transition: { delay: 4 } }}
         whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
         whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
-        onClick={() => onClickDisplay(elo, matches)}
+        onClick={() => onClickDisplay(+elo, +matches, +peak)}
         className="mt-[2vw] bg-black/20 p-[1.2vw] rounded-[1vw] font-[500] px-[2vw] border-[0.1vw] border-white/20 cursor-pointer text-center text-[1.2vw] text-white/80"
       >
         Display Profile

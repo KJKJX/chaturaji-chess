@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
-import { currentQuote, outstandingGame } from "../data/weeklyData";
+import { currentQuotes, outstandingGames } from "../data/weeklyData";
 import Board from "./Board";
 import Tab from "./Tab";
+import ContentPiece from "./ContentPiece";
 function WeeklyContent() {
   return (
     <motion.div
@@ -45,46 +46,17 @@ function WeeklyContent() {
         exit={{
           opacity: 0,
         }}
-        className="h-full w-full flex flex-row overflow-scroll justify-evenly mt-[1vw]"
+        className="h-full w-full flex flex-row overflow-scroll justify-evenly space-x-[1vw] space-y-[3vw] mt-[1vw] flex-wrap"
       >
-        <div className="h-3/4 flex flex-col w-1/3">
-          <p className="text-white/80 text-[1.5vw] font-bold w-full">
-            Outstanding Game
-          </p>
-          <p className="text-white/60 text-[1vw]">
-            Updated {new Date(outstandingGame.date).toLocaleDateString()}
-          </p>
-          <p className="text-white/70 text-[1.2vw] font-bold">
-            {outstandingGame.title}
-          </p>
-          <p className="text-white/60 text-[1vw] font-bold ">
-            {outstandingGame.description}
-          </p>
-          <a href={outstandingGame.link} target="_blank">
-            <Tab className={"mt-[0.5vw] !scale-97 w-full"}>View Match</Tab>
-          </a>
-        </div>
-        <div className="h-3/4 flex flex-col w-1/3">
-          <p className="text-white/80 text-[1.5vw] font-bold w-full">
-            Wise Words
-          </p>
-          <p className="text-white/60 text-[1vw]">
-            Updated {new Date(currentQuote.date).toLocaleDateString()}
-          </p>
-          <p className="text-white/70 text-[1.2vw] font-bold">
-            "{currentQuote.quote}"
-          </p>
-          <a
-            className="text-[1.05vw] text-white/70 hover:text-white/80 mr-auto text-left"
-            target="_blank"
-            href={`https://chess.com/member/${currentQuote.from}`}
-          >
-            <i> From {currentQuote.from} ⧉</i>
-          </a>
-          <p className="text-white/60 text-[1vw] font-bold ">
-            {currentQuote.description}
-          </p>
-        </div>
+        {outstandingGames.map((game) => (
+          <ContentPiece object={game} type={"game"} />
+        ))}
+
+        {currentQuotes.map((quote) => (
+          <ContentPiece object={quote} type={"quote"} />
+        ))}
+
+        {/* <ContentPiece object={currentQuote} type={"quote"} /> */}
       </motion.div>
     </motion.div>
   );

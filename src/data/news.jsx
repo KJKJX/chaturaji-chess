@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Small Update",
+    date: "2026-07-08T23:04:23.873Z",
+    type: "info",
+    tags: ["small update", "content"],
+    description:
+      "Taran0915's idea of level calculation being averaged from both peak and current elo is finally complete! Also, more quotes and outstanding games were added to the Chaturaji Content tab.",
+  },
+  {
     title: "Version 1.8.5!",
     date: "2026-07-07T01:14:22.739Z",
     type: "info",

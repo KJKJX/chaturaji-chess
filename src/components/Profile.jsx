@@ -18,7 +18,9 @@ function calculateRequirements(stats) {
 
   // 2. Calculate how many matches are needed if Elo stays exactly the same
   // Formula: (Exp Needed * 100) / Current Elo
-  const matchesNeeded = Math.ceil((expNeeded * 100) / stats.elo);
+  const matchesNeeded = Math.ceil(
+    (expNeeded * 100) / ((stats.elo + stats.peak) / 2),
+  );
 
   // 3. Calculate how much Elo is needed to level up in exactly 1 more match
   // Formula: (Exp Needed * 100) / (Current Matches + 1)
@@ -86,7 +88,8 @@ function Profile({ stats }) {
             className="text-white/60 text-[1.5vw] font-bold capitalize"
           >
             {" "}
-            <CountUp end={stats.elo} suffix=" Elo" delay={4} />
+            <CountUp end={stats.elo} suffix=" Elo" delay={4} /> |{" "}
+            <CountUp end={stats.peak} suffix=" Peak" delay={4} />
           </motion.span>
         </div>
       </div>
@@ -165,18 +168,20 @@ function Profile({ stats }) {
                 {calculateRequirements(stats).matchesNeeded} More Match
                 {calculateRequirements(stats).matchesNeeded > 1 && "es"}
               </motion.i>
-              <motion.i
-                initial={{
-                  x: -50,
-                  opacity: 0,
-                }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: 9 }}
-                className="text-center text-white/60"
-              >
-                {Math.round(calculateRequirements(stats).eloNeededInOneMatch)}{" "}
-                More Elo
-              </motion.i>
+              {/* {stats.elo === stats.peak && (
+                <motion.i
+                  initial={{
+                    x: -50,
+                    opacity: 0,
+                  }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 9 }}
+                  className="text-center text-white/60"
+                >
+                  {Math.round(calculateRequirements(stats).eloNeededInOneMatch)}{" "}
+                  More Elo
+                </motion.i>
+              )} */}
             </>
           )}
         </ul>

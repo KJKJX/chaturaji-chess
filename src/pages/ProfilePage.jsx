@@ -29,29 +29,35 @@ function ProfilePage() {
   });
   const [selectedTab, setSelectedTab] = useState("profile");
 
-  function handleOnClickDisplay(elo, matches) {
+  function handleOnClickDisplay(elo, matches, peak) {
     setLoading(true);
-    setTimeout(() => {
-      let rank = convertStringToRankObject(convertEloToString(elo));
-      setStats({
-        level: (elo * matches) / 10000,
-        elo: elo,
-        matches: matches,
-        rank: rank,
-      });
-      setLoading(false);
-      setSelectedTab("profile");
-    }, 1500 + Math.random() * 1500);
+    setTimeout(
+      () => {
+        let rank = convertStringToRankObject(convertEloToString(elo));
+        setStats({
+          level: (((elo + peak) / 2) * matches) / 10000,
+          elo: elo,
+          matches: matches,
+          peak,
+          rank: rank,
+        });
+        setLoading(false);
+        setSelectedTab("profile");
+      },
+      1500 + Math.random() * 1500,
+    );
   }
   useEffect(() => {
-    if (localStorage.elo && localStorage.matches) {
-      let elo = localStorage.elo;
-      let matches = localStorage.matches;
+    if (localStorage.elo && localStorage.matches && localStorage.peak) {
+      let elo = +localStorage.elo;
+      let matches = +localStorage.matches;
+      let peak = +localStorage.peak;
       let rank = convertStringToRankObject(convertEloToString(elo));
       setStats({
-        level: (elo * matches) / 10000,
+        level: (((elo + peak) / 2) * matches) / 10000,
         elo: elo,
         matches: matches,
+        peak,
         rank: rank,
       });
     } else {
