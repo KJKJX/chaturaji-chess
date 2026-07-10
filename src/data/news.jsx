@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Records Tab Launch",
+    date: "2026-07-10T23:24:44.239Z",
+    type: "info",
+    tags: ["small update", "rank list"],
+    description:
+      "A third of the records tab has been completed. Now you can see every rank and its threshold. Also, a new match was submitted by agm2920! Check the Chaturaji Content tab!",
+  },
+  {
     title: "Small Update",
     date: "2026-07-08T23:04:23.873Z",
     type: "info",

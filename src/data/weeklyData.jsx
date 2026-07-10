@@ -8,12 +8,12 @@ export const outstandingGames = [
     date: "2026-07-07T01:14:22.739Z",
   },
   {
-    title: "2050+ Anonymous? 24 moves?",
-    caption: "Quickest Recent Game",
+    title: "2350+ Anonymous? 9 MOVES?",
+    caption: "Quickest Game on EARTH!?",
     description:
-      "In an anonymous 2050+ match, 4 players, Shai-guy, Universoul_Crown, SenhorDasDrogas, and bo_mb played one of the quickest matches for a lobby with 2100+ experienced players.",
-    link: "https://www.chess.com/variants/chaturaji/game/105576934/0/1",
-    date: "2026-07-08T23:04:23.873Z",
+      "In an anonymous 2350+ match, 4 people played one of the downright FASTEST matches, lasting only 9 moves, for a lobby with extremely experienced players. Click the link for yourself.",
+    link: "https://www.chess.com/variants/chaturaji/game/103913444/0/2",
+    date: "2026-07-10T23:24:44.239Z",
   },
 ].sort((x, y) => new Date(y.date) - new Date(x.date));
 

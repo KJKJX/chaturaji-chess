@@ -13,6 +13,7 @@ import { useQueryState } from "nuqs";
 import HomePage from "./pages/HomePage";
 import LearnPage from "./pages/LearnPage";
 import NewsPage from "./pages/NewsPage";
+import RecordsPage from "./pages/RecordsPage";
 function App() {
   const [tab] = useQueryState("tab");
   const [lastVisitedNews, setLastVisitedNews] = useState(
@@ -44,6 +45,7 @@ function App() {
             updateLastVisited={handleUpdateLastVisitedNews}
           />
         )}
+        {tab === "records" && <RecordsPage key="records" />}
       </AnimatePresence>
       <Footer />
     </div>

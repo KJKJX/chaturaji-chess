@@ -19,7 +19,7 @@ function Nav({ lastVisitedNews }) {
     { title: "profile" },
     { title: "learn" },
     { title: "puzzles", disabled: true },
-    { title: "records", disabled: true },
+    { title: "records" },
     { title: "news", notify: notifyNews },
   ];
   const [selectedTab, setSelectedTab] = useQueryState("tab");

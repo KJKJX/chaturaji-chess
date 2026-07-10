@@ -38,7 +38,6 @@ function LearnPage() {
     // }, 1500 + Math.random() * 1500);
   }
   function handleOnGuidePreviewClick(guide) {
-    console.log(guide);
     setCurrentGuide(guide);
     // setTimeout(() => {
     setLoading(false);
