@@ -62,27 +62,53 @@ function Board({
     JSON.parse(JSON.stringify([...board])),
   );
   const prevCurrentMove = useRef(currentMove);
+  // useEffect(() => {
+  //   let newMove;
+  //   if (prevCurrentMove.current > currentMove) {
+  //     console.log("less");
+  //     newMove = prevMoves[Math.min(currentMove + 1, moves.length)];
+  //   } else {
+  //     newMove = moves[Math.min(currentMove, moves.length)];
+  //     console.log("more");
+  //   }
+  //   prevCurrentMove.current = currentMove;
+  //   if (!newMove) {
+  //     return;
+  //   }
+  //   let newBoard = [...changeableBoard];
+  //   let toChange = newBoard.findIndex((piece) => {
+  //     return (
+  //       newMove.split(".")[1] === piece.split(".")[1] &&
+  //       newMove.split(".")[0] === piece.split(".")[0]
+  //     );
+  //   });
+  //   newBoard[toChange] = newMove;
+  //   setChangeableBoard(newBoard);
+  // }, [currentMove]);
   useEffect(() => {
     let newMove;
+
     if (prevCurrentMove.current > currentMove) {
-      console.log("less");
-      newMove = prevMoves[Math.min(currentMove + 1, moves.length)];
+      newMove = moves[Math.min(currentMove + 1, moves.length)]
+        .split(" ")
+        .reverse()
+        .join(" ");
     } else {
       newMove = moves[Math.min(currentMove, moves.length)];
-      console.log("more");
     }
     prevCurrentMove.current = currentMove;
     if (!newMove) {
       return;
     }
+    let [beforeMoveArea, afterMoveArea] = newMove.split(" ");
     let newBoard = [...changeableBoard];
     let toChange = newBoard.findIndex((piece) => {
-      return (
-        newMove.split(".")[1] === piece.split(".")[1] &&
-        newMove.split(".")[0] === piece.split(".")[0]
-      );
+      return beforeMoveArea === piece.split(".")[2];
     });
-    newBoard[toChange] = newMove;
+    // console.log(newBoard[toChange]);
+
+    newBoard[toChange] =
+      `${newBoard[toChange].split(".")[0]}.${newBoard[toChange].split(".")[1]}.${afterMoveArea}`;
     setChangeableBoard(newBoard);
   }, [currentMove]);
   return (

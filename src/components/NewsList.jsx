@@ -17,7 +17,8 @@ function NewsList({ tab, onNewsArticlePreviewClick }) {
     setFilteredNews(
       news.filter(
         (article) =>
-          article.type === (tab === "events" ? "event" : tab) || "news" === tab,
+          article.type ===
+          (tab === "news" ? article.type : tab.replace("s", "")),
       ),
     );
   }, [tab]);

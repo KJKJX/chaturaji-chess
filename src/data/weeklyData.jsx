@@ -20,18 +20,18 @@ export const outstandingGames = [
 export const currentQuotes = [
   {
     quote: "Points for Power.",
-    caption: "Quote #1",
+    caption: "Quote #2",
     description:
       "It's simple. Your points is your chance to win. Your points are your power. This does NOT mean to trade all of your pieces though.",
     from: "agm2920",
     date: "2026-07-07T01:14:22.739Z",
   },
   {
-    quote: "Maximize you value.",
-    caption: "Quote #2",
+    quote: "Don't Maximize Rating. Minimize Losses.",
+    caption: "Quote #1",
     description:
-      "Don't just trade everything. Think before trading, 'Can I get more points with this piece than trading it off?' This is especially useful with knights.",
-    from: "Universoul_Crown",
-    date: "2026-07-08T23:04:23.873Z",
+      "Becoming better means shifting your focus from always maximizing rating gain to minimizing loss. Don't try to always get first. Try and aim for 2nd or 3rd if necessary.",
+    from: "IHaveTheSauce",
+    date: "2026-08-04T23:04:23.873Z",
   },
 ].sort((x, y) => new Date(y.date) - new Date(x.date));

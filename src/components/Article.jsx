@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { motion, useScroll } from "motion/react";
 import SectionReader from "./SectionReader";
 import Tab from "./Tab";
 function Article({ article, setSelectedTab, backTab }) {
@@ -30,13 +30,13 @@ function Article({ article, setSelectedTab, backTab }) {
           scaleX: scrollYProgress,
           originX: 0,
         }}
-        className="fixed bg-white/60 rounded-full w-4/5 duration-300 h-[1vw] -translate-y-[0.75vw]"
+        className="fixed bg-white/60 rounded-full w-4/5 duration-300 h-[1vw] translate-y-[-0.75vw]"
       />
       <div
-        className="w-8/10 mx-auto border-white/20 flex flex-col items-center mx-[2vw] mt-[0.8vw] overflow-scroll"
+        className="w-8/10 mx-auto border-white/20 flex flex-col items-center mt-[0.8vw] overflow-scroll"
         ref={containerRef}
       >
-        <p className="text-white/80 text-[1.6vw] !font-[900] capitalize w-full">
+        <p className="text-white/80 text-[1.6vw] font-black! capitalize w-full">
           {article.title}
         </p>
         {
@@ -75,7 +75,7 @@ function Article({ article, setSelectedTab, backTab }) {
         />
         <Tab
           onClick={() => setSelectedTab(backTab)}
-          className={"mt-[0.5vw] !scale-90"}
+          className={"mt-[0.5vw] scale-90!"}
         >
           Back
         </Tab>

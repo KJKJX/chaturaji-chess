@@ -85,11 +85,11 @@ function TipsList() {
           y: 0,
         }}
         transition={{ delay: 2 }}
-        className="w-full h-fit grid grid-cols-2 p-[2vw] text-[1.1vw] text-white/70 gap-[1vw]"
+        className="w-full h-fit grid grid-cols-1 p-[2vw] text-[1.1vw] text-white/70 gap-[1vw]"
       >
         {filteredTips.map((tip) => (
           <div className="flex flex-col space-y-[0.1vw]">
-            <div>{tip.title}</div>
+            <div>"{tip.title}"</div>
             <a
               className="text-[1vw] text-white/60 hover:text-white/80 mr-auto text-left italicize"
               target="_blank"

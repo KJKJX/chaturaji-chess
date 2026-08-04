@@ -1,11 +1,21 @@
 import standard_opening from "../imgs/headlines/standard_opening.png";
 import fianchetto_opening from "../imgs/headlines/fianchetto_opening.png";
+let openingBoard = [
+  "red.boat1.a1",
+  "red.knight1.b1",
+  "red.bishop.c1",
+  "red.king1.d1",
+  "red.pawn1.a2",
+  "red.pawn2.b2",
+  "red.pawn3.c2",
+  "red.pawn4.d2",
+];
 export const openings = [
   {
     title: "The Standard Opening",
     tags: ["safe"],
-    moves: ["red.pawn3.c3", "red.king1.c2", "red.pawn2.b3"],
-    prevMoves: ["red.pawn3.c2", "red.king1.d1", "red.pawn2.b2"],
+    moves: ["c2 c3", "d1 c2", "b2 b3"],
+    board: openingBoard,
     sections: [
       {
         type: "title",
@@ -64,8 +74,8 @@ export const openings = [
   {
     title: "The Fianchetto Opening",
     tags: ["safe"],
-    moves: ["red.pawn2.b3", "red.bishop.b2", "red.king1.c1"],
-    prevMoves: ["red.pawn2.b2", "red.bishop.c1", "red.king1.d1"],
+    moves: ["b2 b3", "c1 b2", "d1 c1"],
+    board: openingBoard,
     sections: [
       {
         type: "title",
@@ -121,34 +131,4 @@ export const openings = [
     link: "https://www.chess.com/variants/chaturaji/game/104807521/0/1",
     img: fianchetto_opening,
   },
-  // {
-  //   title: "The Standard Opening",
-  //   tags: ["safe"],
-  //   moves: ["red.pawn3.c3", "red.king1.c2", "red.pawn2.b3"],
-  //   prevMoves: ["red.pawn3.c2", "red.king1.d1", "red.pawn2.b2"],
-  //   description:
-  //     "The standard opening is used by most players. The king stands in a safe positon, and the knight, bishop, and rook can be easily activated. Follow-ups like Ba2 or Na3 are also common.",
-  //   link: "https://www.chess.com/variants/chaturaji/game/103455763/0/1",
-  //   img: "",
-  // },
-  // {
-  //   title: "The Standard Opening",
-  //   tags: ["safe"],
-  //   moves: ["red.pawn3.c3", "red.king1.c2", "red.pawn2.b3"],
-  //   prevMoves: ["red.pawn3.c2", "red.king1.d1", "red.pawn2.b2"],
-  //   description:
-  //     "The standard opening is used by most players. The king stands in a safe positon, and the knight, bishop, and rook can be easily activated. Follow-ups like Ba2 or Na3 are also common.",
-  //   link: "https://www.chess.com/variants/chaturaji/game/103455763/0/1",
-  //   img: "",
-  // },
-  // {
-  //   title: "The Standard Opening",
-  //   tags: ["safe"],
-  //   moves: ["red.pawn3.c3", "red.king1.c2", "red.pawn2.b3"],
-  //   prevMoves: ["red.pawn3.c2", "red.king1.d1", "red.pawn2.b2"],
-  //   description:
-  //     "The standard opening is used by most players. The king stands in a safe positon, and the knight, bishop, and rook can be easily activated. Follow-ups like Ba2 or Na3 are also common.",
-  //   link: "https://www.chess.com/variants/chaturaji/game/103455763/0/1",
-  //   img: "",
-  // },
 ];

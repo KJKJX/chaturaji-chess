@@ -1,5 +1,22 @@
 export const news = [
   {
+    title: "Universoul Returns!",
+    date: "2026-08-01T23:24:44.239Z",
+    type: "announcement",
+    tags: [],
+    link: "https://www.chess.com/announcements/view/ive-returned-1",
+    description:
+      "Hello everyone, sorry for disappearing for the past few weeks. Some unexpected irl stuff has happened and i couldn't go to chess.com. But not to fear, im back and will tell you when i have to leave from now on. Also SxbZer0 has returned with me! Anyhow, ill continue updating the website and reach for 2400! Thanks guys! (Also Bird-Seed plz tell me if this was unnecceary for an annoucemnt.)",
+  },
+  {
+    title: "Player Profiles",
+    date: "2026-08-04T23:24:44.239Z",
+    type: "info",
+    tags: ["small update", "players"],
+    description:
+      "Another third of the records tab has been completed. View the profiles of some of the players in the Chaturaji Chess Team club! Also, IHaveTheSauce submitted a new quote!",
+  },
+  {
     title: "Records Tab Launch",
     date: "2026-07-10T23:24:44.239Z",
     type: "info",

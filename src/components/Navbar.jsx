@@ -1,7 +1,4 @@
-import React from "react";
 import boat from "../imgs/favicon.svg";
-import { motion } from "motion/react";
-import { clearSearchParams, setSearchParams } from "../functions/urlFunctions";
 import { useQueryState } from "nuqs";
 import Tab from "./Tab";
 import { news } from "../data/news";
@@ -23,7 +20,7 @@ function Nav({ lastVisitedNews }) {
     { title: "news", notify: notifyNews },
   ];
   const [selectedTab, setSelectedTab] = useQueryState("tab");
-  const [subTab, setSubTab] = useQueryState("subTab");
+  const [, setSubTab] = useQueryState("subTab");
   return (
     <nav className="bg-black/10 border-b-[0.1vw] border-white/20 w-full h-[7vw] flex items-center">
       <div className="flex flex-row items-center ml-[1vw]">

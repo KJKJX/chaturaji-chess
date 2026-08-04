@@ -25,3 +25,9 @@ export const getRandomTips = function (amount) {
   }
   return randomTips;
 };
+export const getPieceFromBoardPosition = (board, pos) => {
+  let toChange = board.findIndex((piece) => {
+    return pos === piece.split(".")[2];
+  });
+  return board[toChange];
+};

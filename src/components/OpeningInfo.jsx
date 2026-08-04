@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import Board from "./Board";
 import Tab from "./Tab";
 import { motion } from "motion/react";
 import SectionReader from "./SectionReader";
+import { getPieceFromBoardPosition } from "../data/functions";
 function OpeningInfo({ opening, setSelectedTab }) {
+  const totalMoves = opening.moves.length;
+  const [currentMove, setCurrentMove] = useState(-1);
+  const fullMoves = useMemo(() => {
+    let returnedArray = [];
+    opening.moves.map((move) => {
+      let [beforeMoveArea, afterMoveArea] = move.split(" ");
+      let fullString = `${getPieceFromBoardPosition(opening.board, beforeMoveArea).split(".").at(1).at(0).toUpperCase().replace("P", "")}${afterMoveArea}`;
+      returnedArray.push(fullString);
+    });
+    return returnedArray;
+  }, [opening.moves, opening.board]);
   if (!opening?.moves) {
     return null;
   }
-  const totalMoves = opening.moves.length;
-  const [currentMove, setCurrentMove] = useState(-1);
-
   return (
     <motion.div
       initial={{
@@ -53,7 +62,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
             {"◀︎"}
           </p>
           <div className="w-full overflow-x-scroll flex flex-row flex-wrap space-x-[0.7vw]">
-            {opening.moves.map((move, i) => {
+            {fullMoves.map((move, i) => {
               const [color, piece, position] = move.split(".");
               return (
                 <p
@@ -61,8 +70,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
                     i === currentMove && "bg-white/40"
                   } rounded-[0.1vw]`}
                 >
-                  {i + 1}. {piece.at(0).toUpperCase().replace("P", "")}
-                  {position}{" "}
+                  {i + 1}. {move}
                 </p>
               );
             })}
@@ -100,6 +108,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
       <Board
         moves={opening.moves}
         prevMoves={opening.prevMoves}
+        newBoard={opening.board}
         currentMove={currentMove}
         className={"m-auto"}
         size={20}

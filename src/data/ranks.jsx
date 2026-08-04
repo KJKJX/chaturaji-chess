@@ -183,7 +183,7 @@ const diamond = {
 export const ranks = [
   {
     title: "silver I",
-    requiredElo: 1500,
+    requiredElo: 0,
     main: silver.main,
   },
   {

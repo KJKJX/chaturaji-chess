@@ -45,14 +45,6 @@ let initTips = [
     elo: 2000,
   },
   {
-    title:
-      "If you have a 2-square gap between your king and an opposing knight, you won't be checked for a while!",
-    type: "tip",
-    info: "...",
-    from: "Universoul_Crown",
-    elo: 0,
-  },
-  {
     title: "Remember the 2-loss rule; If you lose twice, take a break!",
     type: "tip",
     info: "...",
@@ -97,6 +89,46 @@ let initTips = [
     type: "tip",
     info: "...",
     from: "SxbZer0",
+    elo: 0,
+  },
+  {
+    title:
+      "The safest square for your king is 2 squares diagonally to the knight. It would take 3 knight hops for it to give a check, which would be a waste of moves for your opponent",
+    type: "tip",
+    info: "...",
+    from: "Danny-2-8-4",
+    elo: 0,
+  },
+  {
+    title:
+      "In Chaturaji, sometimes the best thing to do is just wait for one of your opponents to make a mistake. It might be necessary to make no real advancement with your pieces!",
+    type: "tip",
+    info: "...",
+    from: "Bird-Seed",
+    elo: 0,
+  },
+  {
+    title:
+      "Sacrificing a knight or bishop for two pawns can sometimes be very powerful. In certain spots, sacrificing a knight or bishop for a single pawn can do significant damage to an opponent's position.",
+    type: "tip",
+    info: "...",
+    from: "Bird-Seed",
+    elo: 2000,
+  },
+  {
+    title:
+      "Don't hold on to your pieces for as long as possible. It's generally the players with the least pieces on the board that win, because they have traded all their material and have stacked up on points.",
+    type: "tip",
+    info: "...",
+    from: "VarostTheFlail",
+    elo: 0,
+  },
+  {
+    title:
+      "Players with Rooks in the middlegame often become a target for multiple other players so you may be able to get your share.",
+    type: "tip",
+    info: "...",
+    from: "Nyutixbrother",
     elo: 0,
   },
 ];
