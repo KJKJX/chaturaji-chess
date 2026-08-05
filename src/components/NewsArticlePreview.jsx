@@ -98,7 +98,6 @@ function NewsArticlePreview({ article, i, type, onClick, className }) {
         }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.97 }}
-        onClick={onClick}
         className={`flex flex-col items-center min-h-[2vw] h-fit p-[0.5vw] w-9/20 border-[0.1vw] border-white/50 rounded-[1vw] bg-gray-950/50 cursor-pointer scale-90  ${className}`}
       >
         <a target="_blank" href={article.link} className="w-fit">
