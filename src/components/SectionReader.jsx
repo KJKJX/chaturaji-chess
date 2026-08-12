@@ -1,4 +1,5 @@
 import React from "react";
+import Markdown from "react-markdown";
 
 function SectionReader({ sections, className }) {
   return (
@@ -15,7 +16,7 @@ function SectionReader({ sections, className }) {
                   section.className + " text-left text-white/90 text-[1.5vw]"
                 }
               >
-                {section.text}
+                <Markdown>{section.text}</Markdown>
               </i>
             </>
           );
@@ -27,7 +28,7 @@ function SectionReader({ sections, className }) {
                   section.className + " text-left text-white/70 text-[0.9vw]"
                 }
               >
-                {section.text}
+                <Markdown>{section.text}</Markdown>
               </p>
             </>
           );
@@ -36,9 +37,9 @@ function SectionReader({ sections, className }) {
             <>
               {section?.list.map((item) => (
                 <p
-                  className={`${section.className} text-left text-white/70 text-[0.9vw] before:content-['•'] before:transform before:mr-[0.4vw] indent-[0.6vw]`}
+                  className={`${section.className} text-left text-white/70 text-[0.9vw] before:content-['•'] before:transform before:mr-[0.4vw] indent-[0.6vw] flex flex-row`}
                 >
-                  {item}
+                  <Markdown>{item}</Markdown>
                 </p>
               ))}
             </>
@@ -53,7 +54,7 @@ function SectionReader({ sections, className }) {
                 target="_blank"
                 href={section.link}
               >
-                {section.text}
+                <Markdown>{section.text}</Markdown>
               </a>
             </>
           );

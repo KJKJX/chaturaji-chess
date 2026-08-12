@@ -4,6 +4,7 @@ import Spinner from "../components/Spinner";
 import { AnimatePresence } from "motion/react";
 import RanksList from "../components/RanksList";
 import PlayersList from "../components/PlayersList";
+import UpdatesList from "../components/UpdatesList";
 let tabs = [
   {
     title: "ranks",
@@ -14,13 +15,8 @@ let tabs = [
   },
   {
     title: "updates",
-    disabled: true,
+    // disabled: true,
   },
-
-  // {
-  //   title: "chaturaji content",
-  //   // disabled: true,
-  // },
 ];
 function RecordsPage() {
   const [selectedTab, setSelectedTab] = useState("ranks");
@@ -38,6 +34,7 @@ function RecordsPage() {
         {selectedTab === "player profiles" && (
           <PlayersList key="players_list" />
         )}
+        {selectedTab === "updates" && <UpdatesList key="updates_list" />}
       </AnimatePresence>
     </Main>
   );

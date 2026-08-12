@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Updates List",
+    date: "2026-08-12T22:10:39.236Z",
+    type: "info",
+    tags: ["update", "records tab"],
+    description:
+      "The final third of the records tab has been completed. View past, current, and future updates, and see when they will be expected to release. Also, as requested, gardent490's profile is added.",
+  },
+  {
     title: "Universoul Returns!",
     date: "2026-08-01T23:24:44.239Z",
     type: "announcement",

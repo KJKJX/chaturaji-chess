@@ -34,10 +34,8 @@ function NewsPage({ updateLastVisited }) {
   const [currentArticle, setCurrentArticle] = useState(null);
   function handleOnNewsArticlePreviewClick(article) {
     setCurrentArticle(article);
-    // setTimeout(() => {
     setLoading(false);
     setSelectedTab("article");
-    // }, 1500 + Math.random() * 1500);
   }
   useEffect(() => {
     updateLastVisited();

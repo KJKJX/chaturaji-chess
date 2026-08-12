@@ -21,11 +21,11 @@ export const players = [
   },
   {
     name: "King_Chessable",
-    peak: 2654,
-    color: "text-sky-300",
+    peak: 2754,
+    color: "text-emerald-300",
     status: "legend",
     playRate: 4,
-    img: "https://images.chesscomfiles.com/uploads/v1/user/527453507.5734a778.50x50o.ff43954f3a7a@2x.png",
+    img: "https://images.chesscomfiles.com/uploads/v1/user/527453507.c93085bb.161x161o.fa05c10d7cee.jpg",
     description:
       "The legendary King_Chessable is a cool guy who peaked at 2972, but sadly dropped due to screen time limits. His KC method is very powerful!",
   },
@@ -84,7 +84,7 @@ export const players = [
   },
   {
     name: "KrkAlex",
-    peak: 2410,
+    peak: 2530,
     color: "text-indigo-300",
     status: "player",
     playRate: 4,
@@ -92,6 +92,17 @@ export const players = [
     img: "https://images.chesscomfiles.com/uploads/v1/user/567570344.24324556.48x48o.27c56878820d@2x.jpg",
     description:
       "KrkAlex is one of chaturaji's most influential players. He has a very experimental playstyle, frequently sacrificing pieces in order to create weaknesses for others.",
+  },
+  {
+    name: "gardent490",
+    peak: 2336,
+    color: "text-gray-300",
+    status: "player",
+    playRate: 3,
+    contributions: [],
+    img: "https://images.chesscomfiles.com/uploads/v1/user/135894852.47a06cce.48x48o.9b659f8aadea@2x.png",
+    description:
+      "gardent490 has played on chess.com for 5 years and has been on variants for 4. He has played a lot of variants and mostly plays obscure variants, but Chaturaji is one of his favorite popular variants.",
   },
   {
     name: "is-this-allowed",
