@@ -310,4 +310,6 @@ export const guides = [
       },
     ],
   },
-];
+].map((guide, i) => {
+  return { ...guide, id: i + 1 };
+});

@@ -1,11 +1,11 @@
 export const outstandingGames = [
   {
-    title: "The 335 Move Game",
-    caption: "Longest Recent Game",
+    title: "1 Lucky Man with 35 points",
+    caption: "Free points everywhere!",
     description:
-      "I_Will_pawn_you, Martinaxo, Kirilovski, and Tetris_4_Jeff battled each other, turning into a one of a kind match lasting 335 moves, 132 turns, and a winner with 42 points.",
-    link: "https://www.chess.com/variants/chaturaji/game/105283853/0/1",
-    date: "2026-07-07T01:14:22.739Z",
+      "A 1400, two 2100, and a 2200 fought in what started as a 'Normal 1|5.' But 1 man quickly gained the advantage, and soon, the winner was clearly visible. He was never stopped, ending out with 35 points.",
+    link: "https://www.chess.com/variants/chaturaji/game/107197779/0/3",
+    date: "2026-08-15T15:00:40.680Z",
   },
   {
     title: "2350+ Anonymous? 9 MOVES?",

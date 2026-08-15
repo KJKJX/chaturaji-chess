@@ -4,8 +4,10 @@ import Tab from "./Tab";
 import { motion } from "motion/react";
 import SectionReader from "./SectionReader";
 import { getPieceFromBoardPosition } from "../data/functions";
+import CopyLink from "./CopyLink";
 function OpeningInfo({ opening, setSelectedTab }) {
   const totalMoves = opening.moves.length;
+  const linkToCopy = `${window.location.origin}?tab=learn&opening=${opening.id}`;
   const [currentMove, setCurrentMove] = useState(-1);
   const fullMoves = useMemo(() => {
     let returnedArray = [];
@@ -41,6 +43,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
         <i className="text-white/80 text-[1.4vw] !font-[900] capitalize w-full">
           {opening.title}
         </i>
+        <CopyLink toCopy={linkToCopy} className="mr-auto" />
         <i className="text-white/60 text-[1vw] !font-[900] capitalize w-full capitalize mt-[0.3vw]">
           {opening.moves.length} moves;{" "}
           {totalMoves <= 3

@@ -10,7 +10,7 @@ export const updates = [
     version: "1.9.1",
     title: "links to content",
     description:
-      "Now you can send links of openings and guides to various people.",
+      "Now you can send links of openings and guides to various people by clicking a small 'Copy Link' button at the top of guide articles and openings.",
     date: "2026-08-15T04:00:00.000Z",
   },
   {

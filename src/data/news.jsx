@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Version 1.9.1",
+    date: "2026-08-15T15:07:25.157Z",
+    type: "info",
+    tags: ["new outstanding game", "copy guide/opening link"],
+    description:
+      "Version 1.9.1 has been released. Not much here, just a new outstanding game and a mini-update that allows you to copy and share links of openings and guides. Simply click on one, and at the top is a copy link button.",
+  },
+  {
     title: "Updates List",
     date: "2026-08-12T22:10:39.236Z",
     type: "info",
@@ -58,17 +66,17 @@ export const news = [
   },
   {
     title: "Chaturaji Tournament",
-    date: "2026-07-04T01:57:02.191Z",
+    date: "2026-08-15T15:13:39.254Z",
     details: {
-      dateStart: "TBD",
-      dateEnd: "TBD",
+      dateStart: "2026-08-16T06:30:00-06:00",
+      dateEnd: "2026-08-16T07:30:00-06:00",
     },
     type: "event",
     tags: ["tournament"],
     sections: [
       {
         type: "paragraph",
-        text: "A rumored Chaturaji tournament is upcoming! It will be hosted by is-this-allowed and other various admins.",
+        text: "A Chaturaji tournament is upcoming! It will be hosted by Bird-Seed, is-this-allowed, and other various admins. It starts on August 16, at 6:30 MDT A.M.",
       },
       {
         type: "title",
@@ -76,16 +84,16 @@ export const news = [
       },
       {
         type: "paragraph",
-        text: "Registration isn't available quite yet. If you want to learn more about it, comment here:",
+        text: "Registration is available now. If you want to registrate or announce yourself, comment here:",
       },
       {
         type: "link",
-        link: "https://www.chess.com/clubs/forum/view/what-should-we-do-for-700-members",
+        link: "https://www.chess.com/announcements/view/700-members-tournament-new-bg-and-more",
         text: "Comment Here!",
       },
       {
         type: "paragraph",
-        text: "That's all we have for now. This post will be updated soon!",
+        text: "Many players will be expected!",
       },
     ],
   },

@@ -60,7 +60,7 @@ function NewsList({ tab, onNewsArticlePreviewClick }) {
             i={0}
             type={latestNews.type}
             onClick={() => onNewsArticlePreviewClick(latestNews)}
-            className={"!w-6/10 mx-auto scale-110 mt-[2vw]"}
+            className={"!w-6/10 mx-auto scale-100 mt-[2vw]"}
           />
         )}
       </div>

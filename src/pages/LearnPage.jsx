@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Main from "../components/Main";
 import Spinner from "../components/Spinner";
 import { AnimatePresence, motion } from "motion/react";
@@ -11,6 +11,7 @@ import Article from "../components/Article";
 import { guides } from "../data/guides";
 import GuidesList from "../components/GuidesList";
 import TipsList from "../components/TipsList";
+import { useQueryState } from "nuqs";
 let tabs = [
   {
     title: "openings",
@@ -30,6 +31,8 @@ function LearnPage() {
   const [loading, setLoading] = useState(false);
   const [currentOpening, setCurrentOpening] = useState(null);
   const [currentGuide, setCurrentGuide] = useState(null);
+  const [guide, setGuide] = useQueryState("guide");
+  const [opening, setOpening] = useQueryState("opening");
   function handleOnOpeningPreviewClick(opening) {
     setCurrentOpening(opening);
     // setTimeout(() => {
@@ -43,6 +46,26 @@ function LearnPage() {
     setLoading(false);
     setSelectedTab("guide");
   }
+  useEffect(() => {
+    const foundGuideFromLink = guides.find(
+      (mappedGuide) => mappedGuide.id === +guide,
+    );
+    if (foundGuideFromLink) {
+      setCurrentGuide(foundGuideFromLink);
+      setSelectedTab("guide");
+    }
+    setGuide(null);
+  }, []);
+  useEffect(() => {
+    const foundOpeningFromLink = openings.find(
+      (mappedOpening) => mappedOpening.id === +opening,
+    );
+    if (foundOpeningFromLink) {
+      setCurrentOpening(foundOpeningFromLink);
+      setSelectedTab("opening");
+    }
+    setOpening(null);
+  }, []);
   return (
     <Main
       className={"!w-[49vw] !h-[40vw]"}
@@ -70,6 +93,7 @@ function LearnPage() {
             key="guide"
             article={currentGuide}
             setSelectedTab={setSelectedTab}
+            from={"guide"}
             backTab={"guides"}
           />
         )}

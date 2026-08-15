@@ -131,4 +131,6 @@ export const openings = [
     link: "https://www.chess.com/variants/chaturaji/game/104807521/0/1",
     img: fianchetto_opening,
   },
-];
+].map((opening, i) => {
+  return { ...opening, id: i + 1 };
+});

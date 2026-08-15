@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Main from "./components/Main";
 import Inserter from "./components/Inserter";
 import Footer from "./components/Footer";
@@ -14,8 +14,10 @@ import HomePage from "./pages/HomePage";
 import LearnPage from "./pages/LearnPage";
 import NewsPage from "./pages/NewsPage";
 import RecordsPage from "./pages/RecordsPage";
+const tabs = ["profile", "learn", "news", "records"];
 function App() {
-  const [tab] = useQueryState("tab");
+  const [tab, setTab] = useQueryState("tab");
+  const [to, setTo] = useQueryState("to");
   const [lastVisitedNews, setLastVisitedNews] = useState(
     localStorage.lastVisitedNews || "1926-06-30T01:11:07.487Z",
   );
@@ -23,6 +25,16 @@ function App() {
     localStorage.lastVisitedNews = new Date().toISOString();
     setLastVisitedNews(localStorage.lastVisitedNews);
   };
+  useEffect(() => {
+    if (to) {
+      if (tabs.includes(to)) {
+        setTab(to);
+      } else {
+        setTab(null);
+      }
+      setTo(null);
+    }
+  }, []);
   return (
     <div className="h-screen w-full bg-gray-900 flex flex-col items-center">
       <div

@@ -1,8 +1,8 @@
 {
   "name": "chaturaji-chess-website",
   "private": true,
-  "version": "1.9.0",
-  "lastUpdate": "8/12/2026",
+  "version": "1.9.1",
+  "lastUpdate": "8/15/2026",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,6 +15,7 @@
     "motion": "^12.38.0",
     "nuqs": "^2.8.9",
     "react": "^19.2.6",
+    "react-copy-to-clipboard": "^5.1.1",
     "react-countup": "^6.5.3",
     "react-dom": "^19.2.6",
     "react-markdown": "^10.1.0",

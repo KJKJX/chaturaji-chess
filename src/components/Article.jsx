@@ -3,9 +3,14 @@ import { useRef } from "react";
 import { motion, useScroll } from "motion/react";
 import SectionReader from "./SectionReader";
 import Tab from "./Tab";
-function Article({ article, setSelectedTab, backTab }) {
+import CopyLink from "./CopyLink";
+function Article({ article, setSelectedTab, backTab, from }) {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ container: containerRef });
+  const linkToCopy =
+    from === "guide"
+      ? `${window.location.origin}?tab=learn&guide=${article.id}`
+      : "";
   return (
     <motion.div
       initial={{
@@ -57,6 +62,12 @@ function Article({ article, setSelectedTab, backTab }) {
             by {article.from}
           </a>
         )}{" "}
+        {from === "guide" && (
+          <CopyLink
+            toCopy={linkToCopy}
+            className={"mr-auto text-[0.8vw]! mt-[0.4vw]"}
+          />
+        )}
         {article?.link && (
           <a
             className="text-[0.8vw] text-white/60 hover:text-white/80 text-left mr-auto mt-[0.4vw]"
