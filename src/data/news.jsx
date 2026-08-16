@@ -1,5 +1,38 @@
 export const news = [
   {
+    title: "Chaturaji Tournament",
+    date: "2026-08-15T15:13:39.254Z",
+    details: {
+      dateStart: "2026-08-16T06:30:00-06:00",
+      dateEnd: "2026-08-16T07:30:00-06:00",
+    },
+    type: "event",
+    tags: ["tournament"],
+    sections: [
+      {
+        type: "paragraph",
+        text: "A Chaturaji tournament is upcoming! It will be hosted by Bird-Seed, is-this-allowed, and other various admins. It starts on August 16, at 6:30 MDT P.M.",
+      },
+      {
+        type: "title",
+        text: "How do I join?",
+      },
+      {
+        type: "paragraph",
+        text: "Registration is available now. If you want to registrate or announce yourself, comment here:",
+      },
+      {
+        type: "link",
+        link: "https://www.chess.com/announcements/view/700-members-tournament-new-bg-and-more",
+        text: "Comment Here!",
+      },
+      {
+        type: "paragraph",
+        text: "Many players will be expected!",
+      },
+    ],
+  },
+  {
     title: "Version 1.9.1",
     date: "2026-08-15T15:07:25.157Z",
     type: "info",
@@ -63,39 +96,6 @@ export const news = [
     tags: ["update"],
     description:
       "The News tab has been launched! Now you can get up-to-date with everything going on in the Chaturaji Chess Team club, learn about new updates, and see current events and announcements.",
-  },
-  {
-    title: "Chaturaji Tournament",
-    date: "2026-08-15T15:13:39.254Z",
-    details: {
-      dateStart: "2026-08-16T06:30:00-06:00",
-      dateEnd: "2026-08-16T07:30:00-06:00",
-    },
-    type: "event",
-    tags: ["tournament"],
-    sections: [
-      {
-        type: "paragraph",
-        text: "A Chaturaji tournament is upcoming! It will be hosted by Bird-Seed, is-this-allowed, and other various admins. It starts on August 16, at 6:30 MDT A.M.",
-      },
-      {
-        type: "title",
-        text: "How do I join?",
-      },
-      {
-        type: "paragraph",
-        text: "Registration is available now. If you want to registrate or announce yourself, comment here:",
-      },
-      {
-        type: "link",
-        link: "https://www.chess.com/announcements/view/700-members-tournament-new-bg-and-more",
-        text: "Comment Here!",
-      },
-      {
-        type: "paragraph",
-        text: "Many players will be expected!",
-      },
-    ],
   },
 ];
 // https://www.chess.com/variants/chaturaji/game/105283853/335/1
