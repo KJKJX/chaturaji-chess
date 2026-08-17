@@ -13,24 +13,32 @@ function HomePage() {
           transition={{ type: "spring", damping: 7, bounce: 1 }}
           className="text-white/80 text-[1.7vw] text-center mb-auto"
         >
-          Welcome to the Offical Chaturaji Chess Team Webstie
+          Welcome to the Official Chaturaji Chess Team website
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-white/80 text-[1.2vw] text-center mb-auto"
-        >
-          (More Content Soon! Volunteer{" "}
-          <a
-            href="https://www.chess.com/club/notes/chaturaji-chess-team"
-            target="_blank"
-            className="underline hover:text-white/90"
+        <div className="flex flex-row items-center justify-center mb-[1.6vw] w-full h-full *:my-auto gap-[1vw]">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="text-white/80 text-[0.85vw] text-left mb-auto w-1/3"
           >
-            here
-          </a>
-          ! Click the Profile tab for the main feature.)
-        </motion.p>
+            This is the official Chaturaji Chess Team website! This was created
+            to: 1. Let players see their "rank", 2. To teach players about
+            openings, strategies, techniques, and more, and 3. To inform players
+            about current news. Hop in and check your rank and level in the
+            Profile tab, soak up some clever tips in the Learn tab, check out
+            active players in the Records tab, scroll through past posts in the
+            News tab, or (soon) solve the weekly Puzzle! Thank you to everyone
+            who made this website possible. Enjoy it!
+          </motion.p>
+          <motion.img
+            src="https://images.chesscomfiles.com/uploads/v1/group/677445.7fbed332.160x160o.d5e7c41d9ebf@2x.png"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="text-white/80 text-[1.2vw] text-center mb-auto w-1/4 rounded-[1vw]"
+          />
+        </div>
         <motion.div
           initial={{
             y: 20,

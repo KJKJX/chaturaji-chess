@@ -3,7 +3,7 @@ import { useQueryState } from "nuqs";
 import Tab from "./Tab";
 import { news } from "../data/news";
 import { currentQuotes, outstandingGames } from "../data/weeklyData";
-
+import logo from "../imgs/logo.png";
 function Nav({ lastVisitedNews }) {
   const notifyNews =
     new Date(
@@ -18,16 +18,21 @@ function Nav({ lastVisitedNews }) {
     { title: "puzzles", disabled: true },
     { title: "records" },
     { title: "news", notify: notifyNews },
+    { title: "account", disabled: true },
   ];
   const [selectedTab, setSelectedTab] = useQueryState("tab");
   const [, setSubTab] = useQueryState("subTab");
   return (
     <nav className="bg-black/10 border-b-[0.1vw] border-white/20 w-full h-[7vw] flex items-center">
       <div className="flex flex-row items-center ml-[1vw]">
-        <img src={boat} className="h-[5vw] brightness-120 grayscale-20" />
-        <p className="cursive text-white/70 text-[2vw] ml-[1vw] font-black">
+        <img
+          src={logo}
+          className="h-[5vw] brightness-140 grayscale-50 cursor-pointer"
+          onClick={() => setSelectedTab(null)}
+        />
+        {/* <p className="cursive text-white/70 text-[2vw] ml-[1vw] font-black">
           Chaturaji Chess Team
-        </p>
+        </p> */}
       </div>
       <div className="h-full w-[0.07vw] bg-white/20 ml-[2vw]" />
       <div className="flex flex-row items-center *:mx-[2vw] ml-[2vw]">

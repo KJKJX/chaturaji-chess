@@ -1,5 +1,22 @@
 export const news = [
   {
+    title: "The winner is.",
+    date: "2026-08-17T22:15:35.393Z",
+    type: "announcement",
+    tags: ["tourney"],
+    link: "https://www.chess.com/clubs/forum/view/tournament-winner-17",
+    description:
+      "The tournament winner for the (somewhat) annual Chaturaji Chess team tournament was the O.G, long dedicated Chaturaji player.",
+  },
+  {
+    title: "Version 1.9.2",
+    date: "2026-08-17T22:09:26.831Z",
+    type: "info",
+    tags: ["home page update"],
+    description:
+      "Version 1.9.2 has been released. The updated logo now brings you to the home page, where a description was finally added. Also, this project is now open source, as seen at the end of the footer.",
+  },
+  {
     title: "Chaturaji Tournament",
     date: "2026-08-15T15:13:39.254Z",
     details: {
@@ -55,7 +72,7 @@ export const news = [
     tags: [],
     link: "https://www.chess.com/announcements/view/ive-returned-1",
     description:
-      "Hello everyone, sorry for disappearing for the past few weeks. Some unexpected irl stuff has happened and i couldn't go to chess.com. But not to fear, im back and will tell you when i have to leave from now on. Also SxbZer0 has returned with me! Anyhow, ill continue updating the website and reach for 2400! Thanks guys! (Also Bird-Seed plz tell me if this was unnecceary for an annoucemnt.)",
+      "Hello everyone, sorry for disappearing for the past few weeks. Some unexpected irl stuff has happened and i couldn't go to chess.com. But not to fear, im back and will tell you when i have to leave from now on. Also SxbZer0 has returned with me! Anyhow, ill continue updating the website and reach for 2400! Thanks guys! (Also Bird-Seed plz tell me if this was unnecessary for an announcement.)",
   },
   {
     title: "Player Profiles",

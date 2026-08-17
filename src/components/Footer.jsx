@@ -37,7 +37,14 @@ function Footer() {
         >
           is-this-allowed.
         </a>{" "}
-        Version {version}. Updated last on {lastUpdate}.
+        Version {version}. Updated last on {lastUpdate}. Github Repository:{" "}
+        <a
+          target="_blank"
+          className="underline hover:text-white/90 duration-100"
+          href="https://github.com/KJKJX/chaturaji-chess"
+        >
+          KJKJX/chaturaji-chess
+        </a>
       </p>
     </footer>
   );

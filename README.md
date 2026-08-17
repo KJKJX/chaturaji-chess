@@ -1,19 +1,13 @@
-# React + Vite
+# Chaturaji Chess Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React Vite + Tailwind CSS repository. Feel free to make any pull request.
 
-Currently, two official plugins are available:
+### Note: Other contributor was still me in my acquaintance's account.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Startup
 
-## React Compiler
+Clone the repo and run "npm i", which will install all necessary dependencies.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I will test and accept pull request in due time from the submission, and you will receive a spot on Player Profiles as a contributor.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# chaturaji-chess
-# chaturaji-chess
-# chaturaji-chess
+## That's all. Thanks!
