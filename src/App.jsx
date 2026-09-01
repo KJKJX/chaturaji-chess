@@ -14,7 +14,8 @@ import HomePage from "./pages/HomePage";
 import LearnPage from "./pages/LearnPage";
 import NewsPage from "./pages/NewsPage";
 import RecordsPage from "./pages/RecordsPage";
-const tabs = ["profile", "learn", "news", "records"];
+import PuzzlesPage from "./pages/PuzzlesPage";
+const tabs = ["profile", "learn", "news", "records", "puzzles"];
 function App() {
   const [tab, setTab] = useQueryState("tab");
   const [to, setTo] = useQueryState("to");
@@ -58,6 +59,7 @@ function App() {
           />
         )}
         {tab === "records" && <RecordsPage key="records" />}
+        {tab === "puzzles" && <PuzzlesPage key="puzzles" />}
       </AnimatePresence>
       <Footer />
     </div>

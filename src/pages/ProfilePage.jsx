@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Main from "../components/Main";
 import { AnimatePresence } from "motion/react";
 import Spinner from "../components/Spinner";
@@ -8,7 +8,6 @@ import {
   convertEloToString,
   convertStringToRankObject,
 } from "../data/functions";
-import { useQueryState } from "nuqs";
 const tabs = [
   {
     title: "input",

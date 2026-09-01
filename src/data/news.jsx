@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Puzzles Release!",
+    date: "2026-09-01T22:15:35.393Z",
+    type: "info",
+    tags: ["Version 2.0.0", "Puzzles"],
+    description:
+      "The finally awaited Puzzles Tab has been released after long waits and delays! It works exactly how you expect it. Simply select a puzzle and solve it by tapping the piece and then tapping the location of it's next move!",
+  },
+  {
     title: "The winner is.",
     date: "2026-08-17T22:15:35.393Z",
     type: "announcement",

@@ -15,7 +15,7 @@ function Nav({ lastVisitedNews }) {
   const tabs = [
     { title: "profile" },
     { title: "learn" },
-    { title: "puzzles", disabled: true },
+    { title: "puzzles", disabled: false },
     { title: "records" },
     { title: "news", notify: notifyNews },
     { title: "account", disabled: true },

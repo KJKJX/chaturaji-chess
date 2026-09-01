@@ -14,7 +14,7 @@ export const players = [
     peak: 2745,
     color: "text-green-100",
     status: "legend",
-    playRate: 3,
+    playRate: 2,
     img: "https://images.chesscomfiles.com/uploads/v1/user/91208070.376b1063.161x161o.d3cd82b3a454.png",
     description:
       "The TRULY legendary Articpolarbear one of the absolute best Chaturaji players and is super respectable and cool. He created the 'Big Bear' method.",
@@ -24,7 +24,7 @@ export const players = [
     peak: 2754,
     color: "text-emerald-300",
     status: "legend",
-    playRate: 4,
+    playRate: 3,
     img: "https://images.chesscomfiles.com/uploads/v1/user/527453507.c93085bb.161x161o.fa05c10d7cee.jpg",
     description:
       "The legendary King_Chessable is a cool guy who peaked at 2972, but sadly dropped due to screen time limits. His KC method is very powerful!",
@@ -34,7 +34,7 @@ export const players = [
     peak: 2443,
     color: "text-yellow-200",
     status: "player",
-    playRate: 3,
+    playRate: 2,
     img: "https://images.chesscomfiles.com/uploads/v1/user/354858343.81951701.50x50o.d0caa5390176@2x.jpg",
     description:
       "oh-no-botezgambit is (no offense) a talkative and annoying player, but he has the knowledge to back it up. He seems to be friends with KrkAlex too.",
@@ -48,7 +48,7 @@ export const players = [
     playRate: 3,
     img: "https://images.chesscomfiles.com/uploads/v1/user/53442930.eef5436e.50x50o.3b099df89b40@2x.jpg",
     description:
-      "waterdragon888 is a friend of Universoul's and formerly was top 20 in hyper Chaturaji. He's a wemmbu fan and (supposedly) has a private vocabulary tutor.",
+      "waterdragon888 is a friend of Universoul's and is on the top 20 list in hyper Chaturaji. He's a wemmbu fan and (supposedly) has a private vocabulary tutor.",
   },
   {
     name: "Universoul_Crown",
@@ -56,7 +56,7 @@ export const players = [
     color: "text-emerald-100",
     status: "creator",
     contributions: ["Created the website"],
-    playRate: 4,
+    playRate: 2,
     img: "https://images.chesscomfiles.com/uploads/v1/user/412575645.5dfce214.50x50o.52d0d0dedc88@2x.jpg",
     description:
       "Universoul_Crown is the official creator of this website. His passions are coding, playing Chaturaji, and video games. (Idk if u can tell but my pfp is magolor from kirby.)",
@@ -67,7 +67,7 @@ export const players = [
     color: "text-sky-200",
     status: "sub creator",
     contributions: ["Helped create the website", "Close friend of Universoul"],
-    playRate: 4,
+    playRate: 2,
     img: "https://images.chesscomfiles.com/uploads/v1/user/412555867.82821537.200x200o.ee8e85be5add@2x.jpg",
     description:
       "SxbZer0 is a close friend of Universoul_Crown whose passions are Chaturaji, BlockBench, and (of course) video games as well.",
@@ -87,7 +87,7 @@ export const players = [
     peak: 2530,
     color: "text-indigo-300",
     status: "player",
-    playRate: 4,
+    playRate: 1,
     contributions: [],
     img: "https://images.chesscomfiles.com/uploads/v1/user/567570344.24324556.48x48o.27c56878820d@2x.jpg",
     description:

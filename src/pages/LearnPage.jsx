@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Main from "../components/Main";
 import Spinner from "../components/Spinner";
-import { AnimatePresence, motion } from "motion/react";
-import Tab from "../components/Tab";
-import Board from "../components/Board";
+import { AnimatePresence } from "motion/react";
 import OpeningInfo from "../components/OpeningInfo";
 import { openings } from "../data/openings";
 import OpeningsList from "../components/OpeningsList";

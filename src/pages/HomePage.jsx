@@ -13,7 +13,7 @@ function HomePage() {
           transition={{ type: "spring", damping: 7, bounce: 1 }}
           className="text-white/80 text-[1.7vw] text-center mb-auto"
         >
-          Welcome to the Official Chaturaji Chess Team website
+          Welcome to the Official Chaturaji Chess Team Website
         </motion.p>
         <div className="flex flex-row items-center justify-center mb-[1.6vw] w-full h-full *:my-auto gap-[1vw]">
           <motion.p
@@ -28,8 +28,8 @@ function HomePage() {
             about current news. Hop in and check your rank and level in the
             Profile tab, soak up some clever tips in the Learn tab, check out
             active players in the Records tab, scroll through past posts in the
-            News tab, or (soon) solve the weekly Puzzle! Thank you to everyone
-            who made this website possible. Enjoy it!
+            News tab, or solve some puzzles! Thank you to everyone who made this
+            website possible. Enjoy it!
           </motion.p>
           <motion.img
             src="https://images.chesscomfiles.com/uploads/v1/group/677445.7fbed332.160x160o.d5e7c41d9ebf@2x.png"

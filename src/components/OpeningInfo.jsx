@@ -3,17 +3,28 @@ import Board from "./Board";
 import Tab from "./Tab";
 import { motion } from "motion/react";
 import SectionReader from "./SectionReader";
-import { getPieceFromBoardPosition } from "../data/functions";
+import {
+  applyMoveToBoard,
+  getPieceFromBoardPosition,
+  moveToMoveString,
+} from "../data/functions";
 import CopyLink from "./CopyLink";
 function OpeningInfo({ opening, setSelectedTab }) {
   const totalMoves = opening.moves.length;
   const linkToCopy = `${window.location.origin}?tab=learn&opening=${opening.id}`;
-  const [currentMove, setCurrentMove] = useState(-1);
+  const [currentMove, setCurrentMove] = useState(0);
   const fullMoves = useMemo(() => {
     let returnedArray = [];
-    opening.moves.map((move) => {
+    let currentBoard = opening.board;
+
+    opening.moves.map((move, i) => {
+      // console.log(move);
+
       let [beforeMoveArea, afterMoveArea] = move.split(" ");
-      let fullString = `${getPieceFromBoardPosition(opening.board, beforeMoveArea).split(".").at(1).at(0).toUpperCase().replace("P", "")}${afterMoveArea}`;
+      currentBoard = applyMoveToBoard(opening.moves, i, 0, currentBoard);
+
+      let fullString = moveToMoveString(currentBoard, move);
+
       returnedArray.push(fullString);
     });
     return returnedArray;
@@ -57,7 +68,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
           <p
             className="cursor-pointer hover:scale-110 duration-150"
             onClick={() => {
-              if (currentMove > -1) {
+              if (currentMove > 0) {
                 setCurrentMove(currentMove - 1);
               }
             }}
@@ -70,7 +81,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
               return (
                 <p
                   className={`${
-                    i === currentMove && "bg-white/40"
+                    i + 1 === currentMove && "bg-white/40"
                   } rounded-[0.1vw]`}
                 >
                   {i + 1}. {move}
@@ -81,7 +92,7 @@ function OpeningInfo({ opening, setSelectedTab }) {
           <p
             className="cursor-pointer hover:scale-110 duration-150"
             onClick={() => {
-              if (currentMove + 1 < opening.moves.length) {
+              if (currentMove + 1 < opening.moves.length + 1) {
                 setCurrentMove(currentMove + 1);
               }
             }}
@@ -111,9 +122,10 @@ function OpeningInfo({ opening, setSelectedTab }) {
       <Board
         moves={opening.moves}
         prevMoves={opening.prevMoves}
-        newBoard={opening.board}
+        board={opening.board}
         currentMove={currentMove}
         className={"m-auto"}
+        interactive={false}
         size={20}
       />
     </motion.div>

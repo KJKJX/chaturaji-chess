@@ -1,16 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Main from "../components/Main";
 import Spinner from "../components/Spinner";
-import { AnimatePresence, motion } from "motion/react";
-import Tab from "../components/Tab";
-import Board from "../components/Board";
-import OpeningInfo from "../components/OpeningInfo";
-import { openings } from "../data/openings";
-import OpeningsList from "../components/OpeningsList";
+import { AnimatePresence } from "motion/react";
 import Article from "../components/Article";
-import { guides } from "../data/guides";
-import GuidesList from "../components/GuidesList";
-import TipsList from "../components/TipsList";
 import NewsList from "../components/NewsList";
 import WeeklyContent from "../components/WeeklyContent";
 let tabs = [
