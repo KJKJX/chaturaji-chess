@@ -119,7 +119,7 @@ export const applyMoveToBoard = (
 
     newBoard = newBoard.filter((_, i) => i !== captureIndex);
 
-    updatePlayerPoints(movingPlayerColor, points / 2);
+    updatePlayerPoints(movingPlayerColor, points);
   }
 
   if (newMove.includes("RESTORE")) {
@@ -135,7 +135,7 @@ export const applyMoveToBoard = (
 
     newBoard.push(`${restoredPieceInfo}.${beforeMoveArea}`);
 
-    updatePlayerPoints(movingPlayerColor, -(points / 2));
+    updatePlayerPoints(movingPlayerColor, -points);
   }
 
   return newBoard;
