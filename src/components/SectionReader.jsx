@@ -1,6 +1,15 @@
 import React from "react";
 import Markdown from "react-markdown";
-
+import Board from "./Board";
+//  <Board
+//   moves={opening.moves}
+//   prevMoves={opening.prevMoves}
+//   board={opening.board}
+//   currentMove={currentMove}
+//   className={"m-auto"}
+//   interactive={false}
+//   size={20}
+// />
 function SectionReader({ sections, className }) {
   return (
     <div className={className}>
@@ -56,6 +65,27 @@ function SectionReader({ sections, className }) {
               >
                 <Markdown>{section.text}</Markdown>
               </a>
+            </>
+          );
+        } else if (section.type === "board") {
+          return (
+            <>
+              <Board
+                moves={[]}
+                board={section.board}
+                currentMove={0}
+                className={"m-auto mb-[-0.9vw]!"}
+                interactive={false}
+                size={20}
+              />
+              <p
+                className={
+                  section.className +
+                  " text-left text-white/60 text-[0.7vw] italic mt-0!"
+                }
+              >
+                <Markdown>{section.caption}</Markdown>
+              </p>
             </>
           );
         }

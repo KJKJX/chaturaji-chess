@@ -1,3 +1,4 @@
+import blank_image from "../imgs/blank_image.png";
 export const players = [
   {
     name: "Bird-Seed",
@@ -8,6 +9,18 @@ export const players = [
     img: "https://images.chesscomfiles.com/uploads/v1/user/386504429.74a7e1ee.50x50o.c2afe78a792b@2x.jpg",
     description:
       "Bird-Seed is the owner of the Chaturaji Chess Team Club and, along with is-this-allowed, has relentlessly encouraged and supported this website. He also wrote a book! His profile has more on it.",
+  },
+  {
+    name: "Shai_Guy",
+    peak: 2200,
+    color: "text-yellow-200",
+    matches: 550,
+    status: "player",
+    contributions: [],
+    playRate: 4,
+    img: blank_image,
+    description:
+      "Shai_Guy is an extremely active (like 1000 matches in 1 week) player. His nonchalance with his rating is very respectable, and he is another friend of Universoul.",
   },
   {
     name: "Articpolarbear",
@@ -34,14 +47,14 @@ export const players = [
     peak: 2443,
     color: "text-yellow-200",
     status: "player",
-    playRate: 2,
+    playRate: 1,
     img: "https://images.chesscomfiles.com/uploads/v1/user/354858343.81951701.50x50o.d0caa5390176@2x.jpg",
     description:
       "oh-no-botezgambit is (no offense) a talkative and annoying player, but he has the knowledge to back it up. He seems to be friends with KrkAlex too.",
   },
   {
     name: "waterdragon888",
-    peak: 2147,
+    peak: 2200,
     color: "text-purple-100",
     status: "contributor",
     contributions: ["Helped with board feature", "Codes with Python"],
@@ -52,35 +65,36 @@ export const players = [
   },
   {
     name: "Universoul_Crown",
-    peak: 2329,
+    peak: 2336,
     color: "text-emerald-100",
     status: "creator",
     contributions: ["Created the website"],
-    playRate: 2,
+    playRate: 3,
     img: "https://images.chesscomfiles.com/uploads/v1/user/412575645.5dfce214.50x50o.52d0d0dedc88@2x.jpg",
     description:
       "Universoul_Crown is the official creator of this website. His passions are coding, playing Chaturaji, and video games. (Idk if u can tell but my pfp is magolor from kirby.)",
   },
   {
     name: "SxbZer0",
-    peak: 2225,
+    peak: 2200,
     color: "text-sky-200",
     status: "sub creator",
     contributions: ["Helped create the website", "Close friend of Universoul"],
-    playRate: 2,
+    playRate: 3,
     img: "https://images.chesscomfiles.com/uploads/v1/user/412555867.82821537.200x200o.ee8e85be5add@2x.jpg",
     description:
-      "SxbZer0 is a close friend of Universoul_Crown whose passions are Chaturaji, BlockBench, and (of course) video games as well.",
+      "SxbZer0 is a close friend of Universoul_Crown whose passions are Chaturaji, BlockBench, and (of course) video games as well. Oh, and Toad. BBBBBBBUUUUUUPPPPPPP!",
   },
   {
     name: "Diamond_427",
-    peak: 2242,
+    peak: 2255,
     color: "text-amber-100",
     status: "contributor",
     contributions: ["Gave ideas for updates"],
-    playRate: 2,
+    playRate: 4,
     img: "https://images.chesscomfiles.com/uploads/v1/user/407514455.f1f3f1d7.50x50o.622b3b2e9b85.png",
-    description: "",
+    description:
+      "Diamond_427 is a casual variants player. He didn't want me to mention what opening he likes (for some reason), and is friends with Universoul. He also occasionally gives ideas for this website.",
   },
   {
     name: "KrkAlex",
@@ -95,7 +109,7 @@ export const players = [
   },
   {
     name: "gardent490",
-    peak: 2336,
+    peak: 2300,
     color: "text-gray-300",
     status: "player",
     playRate: 3,
@@ -118,6 +132,42 @@ export const players = [
     playRate: 0,
     img: "https://images.chesscomfiles.com/uploads/v1/user/380120947.b7a12c83.160x160o.f755c7471549@2x.png",
     description: "",
+  },
+  {
+    name: "Logik-47",
+    peak: 2200,
+    color: "text-green-100",
+    matches: 550,
+    status: "contributor",
+    contributions: ["Submitted Opening corrections."],
+    playRate: 3,
+    img: blank_image,
+    description:
+      "Logik-47 enjoys nature and math very much, and they mostly play Chaturaji as a break after long hours of studying. They’ve been playing Chaturaji for not too long, since around June-July and is currently trying to get to 2400.",
+  },
+  {
+    name: "agm2920",
+    peak: 2450,
+    color: "text-sky-200",
+    matches: 550,
+    status: "contributor",
+    contributions: ["Submits chaturaji content."],
+    playRate: 3,
+    img: blank_image,
+    description:
+      "agm2920 is really just a chill, cool guy. As a fun fact, he was also apparently SxbZer0's mentor starting out. He's trying to get to 2600 and is steadily making progress..... with minor difficulties.",
+  },
+  {
+    name: "Taran0915",
+    peak: 2650,
+    color: "text-red-200",
+    matches: 550,
+    status: "legend",
+    contributions: [],
+    playRate: 3,
+    img: blank_image,
+    description:
+      "Taran0915 is nearing the legendary player title. If the best players were to be ranked, he would be in 3rd place, directly under King_Chessable (a.k.a. KFC) and Articpolarbear. Most say that he will take up the best player mantle once the others step down.",
   },
 ].sort((a, b) => {
   const statusOrder = {

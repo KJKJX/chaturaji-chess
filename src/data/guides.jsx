@@ -1,6 +1,59 @@
 import endgame_cooperation_guide from "../imgs/headlines/endgame_cooperation_guide.png";
+import beginner_guide from "../imgs/headlines/beginner_guide.png";
 
 export const guides = [
+  // {
+  //   title: "From 1500-2000: How to Begin Playing Chaturaji",
+  //   img: beginner_guide,
+  //   link: "",
+  //   from: "Universoul_Crown",
+  //   date: "2026-09-03T20:00:00.000Z",
+  //   minRead: 5,
+  //   sections: [
+  //     {
+  //       type: "paragraph",
+  //       text: "So, you've stumbled upon the Chaturaji variant. You think it's weird. Like, 4 players on a normal chess board? Boats instead of Rooks? No Queen!?!? Well then, you would stick to normal chess. But if you're like me, you don't like normal chess. You want a new adventure.",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "*So, where do you start? And how do you get good at it?* Simple. Read this guide right here. This guide will teach you simple terms, starter techniques, and mistakes to avoid. From this guide, you should be able to go from 1500 rank to 2000+, an early yet groundbreaking milestone, within 250 matches. Sounds like alot, huh? Well then, let's start now! Here is the contents:",
+  //     },
+  //     {
+  //       type: "list",
+  //       list: [
+  //         "Understanding the Foundation (Board, Winning & Perks)",
+  //         "Terms You Will Hear & See",
+  //         "Warming Up With A Good Match",
+  //         "Openings, Of Course",
+  //         "Staying Safe",
+  //         "Play A Match!",
+  //         "Stay Commited",
+  //       ],
+  //     },
+  //     {
+  //       type: "title",
+  //       text: "Understanding the Foundation (Board, Winning & Perks)",
+  //     },
+  //     {
+  //       type: "paragraph",
+  //       text: "Let's start with the board:",
+  //     },
+  //     {
+  //       type: "board",
+  //       board: [
+  //         "red.boat.a1",
+  //         "red.knight.b1",
+  //         "red.bishop.c1",
+  //         "red.king.d1",
+  //         "red.pawn1.a2",
+  //         "red.pawn2.b2",
+  //         "red.pawn3.c2",
+  //         "red.pawn4.d2",
+  //       ],
+  //       caption: "The starting position of the board.",
+  //     },
+  //   ],
+  // },
   {
     title: "A Guide to Chaturaji Endgame Cooperation",
     img: endgame_cooperation_guide,

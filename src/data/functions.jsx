@@ -49,7 +49,10 @@ export const applyMoveToBoard = (
     return 0;
   };
 
-  const updatePlayerPoints = (playerColor, changeAmount) => {
+  const updatePlayerPoints = (playerColor, changeAmount, newMove) => {
+    let extraAmount = +newMove.split(" ")[3] || 0;
+    console.log(extraAmount);
+
     if (typeof setPlayers !== "function") {
       return;
     }
@@ -60,7 +63,7 @@ export const applyMoveToBoard = (
         (p) => p.color === playerColor,
       );
       if (playerIndex !== -1) {
-        updatedPlayers[playerIndex].points += changeAmount;
+        updatedPlayers[playerIndex].points += changeAmount + extraAmount;
       }
       return updatedPlayers;
     });
@@ -107,7 +110,7 @@ export const applyMoveToBoard = (
   if (newMove.includes("CAPTURE")) {
     let captureIndex = newBoard.findIndex((piece) => {
       return (
-        newMove.split(" ").at(-1).replaceAll("CAPTURE.", "") ===
+        newMove.split(" ").at(2).replaceAll("CAPTURE.", "") ===
         [piece.split(".")[0], piece.split(".")[1]].join(".")
       );
     });
@@ -119,13 +122,13 @@ export const applyMoveToBoard = (
 
     newBoard = newBoard.filter((_, i) => i !== captureIndex);
 
-    updatePlayerPoints(movingPlayerColor, points);
+    updatePlayerPoints(movingPlayerColor, points, newMove);
   }
 
   if (newMove.includes("RESTORE")) {
     const restoredPieceInfo = newMove
       .split(" ")
-      .at(-1)
+      .at(2)
       .replaceAll("RESTORE.", "");
     const restoredPieceType = restoredPieceInfo
       .split(".")[1]

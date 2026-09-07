@@ -54,6 +54,7 @@ function Board({
   continueTurn = () => {},
   size = 25,
   updateBoard = () => {},
+  sizeKind = "vw",
 }) {
   // const [board] = useState(board || baseBoard);
   const [players, setPlayers] = useState(
@@ -192,10 +193,10 @@ function Board({
     >
       {interactive && (
         <div
-          style={{
-            width: size + "vw",
-          }}
-          className="h-[2.5vw] flex justify-between"
+          // style={{
+          //   width: size + "vw",
+          // }}
+          className="h-[2.5vw] flex w-full justify-between"
         >
           <PlayerStats player={players[1]} isTurn={turn === 1} />
           <PlayerStats player={players[2]} reverse isTurn={turn === 2} />
@@ -203,8 +204,8 @@ function Board({
       )}
       <div
         style={{
-          height: size + "vw",
-          width: size + "vw",
+          height: size + sizeKind,
+          width: size + sizeKind,
         }}
         className="bg-black/20 grid grid-cols-8 grid-rows-8 gap-0 outline-none grid rotate-270 relative my-[1vw]"
       >
@@ -261,8 +262,8 @@ function Board({
               style={{
                 gridRow: `${position.at(0).charCodeAt(0) - 96}`,
                 gridColumn: position.at(-1),
-                height: size * 0.12 + "vw",
-                width: size * 0.12 + "vw",
+                height: size * 0.12 + sizeKind,
+                width: size * 0.12 + sizeKind,
                 filter: realColor,
                 backgroundColor:
                   interactive && selectedPiece === string
@@ -277,10 +278,10 @@ function Board({
       </div>
       {interactive && (
         <div
-          style={{
-            width: size + "vw",
-          }}
-          className="h-[2.5vw] flex justify-between"
+          // style={{
+          //   width: size + "vw",
+          // }}
+          className="h-[2.5vw] flex w-full justify-between"
         >
           <PlayerStats player={players[0]} isTurn={turn === 0} />
           <PlayerStats player={players[3]} reverse isTurn={turn === 3} />

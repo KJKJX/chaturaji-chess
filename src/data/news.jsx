@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Content Additions",
+    date: "2026-09-07T20:49:28.843Z",
+    type: "info",
+    tags: ["Puzzles", "Player Profiles"],
+    description:
+      "A fragment of the content additions update has been added. We now have 2 new puzzles, 4 new player profiles, and responsiveness for puzzles, so it's now mobile friendly. Updates on guides and openings, coming soon! ",
+  },
+  {
     title: "Puzzles Release!",
     date: "2026-09-01T22:15:35.393Z",
     type: "info",

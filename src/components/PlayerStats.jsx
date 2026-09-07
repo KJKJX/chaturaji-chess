@@ -3,7 +3,7 @@ import { colorToRealColor } from "../data/functions";
 function PlayerStats({ player, reverse = false, isTurn }) {
   return (
     <div
-      className={`flex h-full w-fit rounded-[0.2vw] gap-[0.75vw] justify-center items-center ${reverse ? "flex-row-reverse translate-x-[2vw]" : "flex-row  translate-x-[-2vw]"} ${player.alive || "opacity-50"} ${isTurn || "opacity-50"}`}
+      className={`flex h-full w-fit rounded-[0.2vw] gap-[0.75vw] justify-center items-center ${reverse ? "flex-row-reverse" : "flex-row"} ${player.alive || "opacity-50"} ${isTurn || "opacity-50"}`}
       //   style={{ backgroundColor: colorToRealColor(player.color) }}
     >
       <p className="drop-shadow-[0_0_2px_rgba(255,255,255,0.8)]  text-[1.75vw]">

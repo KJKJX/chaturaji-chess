@@ -10,7 +10,15 @@ function InteractivePuzzle({ puzzle, setTab, backToAllPuzzles }) {
   const [message, setMessage] = useState("Start!");
   const [board, setBoard] = useState(puzzle.board);
   function handleCheckPuzzleMoveCorrect(puzzleMove) {
-    if (moves[move + 1] === puzzleMove) {
+    let toCheck = moves[move + 1];
+    if (toCheck.split(" ").length === 4) {
+      toCheck = toCheck.split(" ");
+      toCheck.pop();
+      toCheck = toCheck.join(" ");
+    }
+    console.log(toCheck);
+
+    if (toCheck === puzzleMove) {
       setMove(Math.min(moves.length, move + 1));
       // console.log(applyMoveToBoard(moves, move + 1, 0, puzzle.board));
 
@@ -39,7 +47,7 @@ function InteractivePuzzle({ puzzle, setTab, backToAllPuzzles }) {
   }, [move]);
   return (
     <motion.div
-      className="flex flex-row items-center justify-center"
+      className="flex flex-row w-full h-full py-[1vw] justify-center overflow-y-scroll"
       exit={{
         opacity: 0,
       }}

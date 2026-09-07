@@ -5,7 +5,7 @@ import { colorToRealColor } from "../data/functions";
 import Tab from "./Tab";
 function PuzzleSidebar({ puzzle, message, replayPuzzle, backToAllPuzzles }) {
   return (
-    <div className="h-full w-[20vw] border-[0.1vw] border-white/30 mr-[5vw] rounded-[1vw] bg-black/30 flex flex-col px-[0.5vw]">
+    <div className="min-h-[29vw] h-fit w-[20vw] border-[0.1vw] border-white/30 mr-[5vw] rounded-[1vw] bg-black/30 flex flex-col p-[0.5vw]">
       <i className="text-center mx-auto text-[1.7vw] flex items-center text-white/70 mt-[1vw]">
         {puzzle.title}
       </i>

@@ -21,7 +21,9 @@ function PuzzlePreview({ puzzle, i, openPuzzle }) {
     >
       <Board {...puzzle} size={10} />
       <div className="flex flex-col text-left ml-[0.75vw]">
-        <i className="text-white/70 text-[1.4vw]">{puzzle.title}</i>
+        <i className={`text-white/70 ${puzzle.textSize || "text-[1.4vw]"}`}>
+          {puzzle.title}
+        </i>
         <p className="text-white/70 text-[0.8vw]">{puzzle.goal}</p>
         <span className="text-white/80 text-[0.85vw] capitalize flex flex-row items-center mt-[0.5vw]">
           <div
