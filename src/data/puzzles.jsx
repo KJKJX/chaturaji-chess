@@ -1,5 +1,94 @@
 export const puzzles = [
   {
+    title: "No Choice but 1...",
+    textSize: "text-[1.3vw]",
+    moves: [
+      "g5 f4 CAPTURE.green.pawn2 1",
+      "c1 b1 CAPTURE.yellow.knight",
+      "e4 f4 CAPTURE.yellow.king",
+    ], // TODO: y. Kxf5++ or y. Kxf4++
+    startingPlayers: [
+      { color: "red", points: 0, alive: false },
+      { color: "blue", points: 7, alive: true },
+      { color: "yellow", points: 12, alive: true },
+      { color: "green", points: 12, alive: true },
+    ],
+    startingTurn: 2, // yellow
+    board: [
+      "green.king.g1",
+      "green.boat.c1",
+      "yellow.knight.b1",
+      "green.pawn1.e2",
+      "blue.boat.h3",
+      "green.pawn2.f4",
+      "blue.king.e4",
+      "yellow.king.g5",
+      "blue.pawn3.f5",
+      "blue.knight.d5",
+      "blue.boat.g8",
+    ],
+    goal: "As Yellow, since you're good as dead, secure a second place win (or close enough).",
+    hint: "Remember double checks!",
+    difficulty: "easy",
+  },
+  {
+    title: "Playing for 2nd",
+    textSize: "text-[1.3vw]",
+    moves: ["e5 d4 1"],
+    startingPlayers: [
+      { color: "red", points: 12, alive: true },
+      { color: "blue", points: 17, alive: true },
+      { color: "yellow", points: 19, alive: true },
+      { color: "green", points: 13, alive: true },
+    ],
+    startingTurn: 2, // yellow
+    board: [
+      "green.pawn.e1",
+      "green.pawn.e2",
+      "green.king.d3",
+      "blue.king.c4",
+      "yellow.king.e5",
+      "red.pawn.a6",
+      "red.king.c7",
+      "red.pawn.b7",
+      "red.knight.d8",
+    ],
+    goal: "As Yellow, try not to lose, even if that means not playing for 1st.",
+    hint: "What's the best wat to end the match?",
+    difficulty: "intermediate",
+  },
+  {
+    title: "Rook Sacrifice",
+    textSize: "text-[1.3vw]",
+    moves: ["a3 d3 CAPTURE.green.pawn2", "e4 d3 CAPTURE.yellow.boat", "c4 b5"], // TODO: y. Rxd3!!
+    startingPlayers: [
+      { color: "red", points: 12, alive: true },
+      { color: "blue", points: 18, alive: true },
+      { color: "yellow", points: 13, alive: true },
+      { color: "green", points: 16, alive: true },
+    ],
+    startingTurn: 2, // yellow
+    board: [
+      "blue.king.b8",
+      "green.pawn1.d1",
+      "yellow.pawn1.h2",
+      "green.king.e2",
+      "yellow.pawn2.g3",
+      "green.pawn2.d3",
+      "yellow.boat.a3",
+      "green.pawn3.e4",
+      "red.king.c4",
+      "red.pawn1.b4",
+      "yellow.pawn3.g5",
+      "yellow.king.g6",
+      "red.pawn2.d6",
+      "yellow.bishop.h8",
+    ],
+    goal: "As Yellow, control the match by preventing a death though it might cause a loss of points.",
+    hint: "Controlling the game is better than points.",
+    difficulty: "expert",
+  },
+  {
     title: "The Trapped Pawn",
     textSize: "text-[1.3vw]",
     moves: [

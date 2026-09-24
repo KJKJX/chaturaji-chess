@@ -49,9 +49,10 @@ export const applyMoveToBoard = (
     return 0;
   };
 
-  const updatePlayerPoints = (playerColor, changeAmount, newMove) => {
-    let extraAmount = +newMove.split(" ")[3] || 0;
-    console.log(extraAmount);
+  const updatePlayerPoints = (playerColor, changeAmount, newMove = "") => {
+    const moveParts = newMove.split(" ");
+    const extraAmount =
+      +moveParts[3] || (!Number.isNaN(+moveParts[2]) ? +moveParts[2] : 0) || 0;
 
     if (typeof setPlayers !== "function") {
       return;
@@ -64,6 +65,23 @@ export const applyMoveToBoard = (
       );
       if (playerIndex !== -1) {
         updatedPlayers[playerIndex].points += changeAmount + extraAmount;
+      }
+      return updatedPlayers;
+    });
+  };
+
+  const updatePlayerAliveState = (playerColor, isAlive) => {
+    if (typeof setPlayers !== "function") {
+      return;
+    }
+
+    setPlayers((prevPlayers) => {
+      const updatedPlayers = [...prevPlayers];
+      const playerIndex = updatedPlayers.findIndex(
+        (p) => p.color === playerColor,
+      );
+      if (playerIndex !== -1) {
+        updatedPlayers[playerIndex].alive = isAlive;
       }
       return updatedPlayers;
     });
@@ -117,15 +135,18 @@ export const applyMoveToBoard = (
 
     const capturedPiece = newBoard[captureIndex];
     const capturedPieceType = capturedPiece.split(".")[1].replace(/\d/g, "");
+    const capturedPlayerColor = capturedPiece.split(".")[0];
 
     const points = getPointsForPiece(capturedPieceType);
 
     newBoard = newBoard.filter((_, i) => i !== captureIndex);
 
-    updatePlayerPoints(movingPlayerColor, points, newMove);
-  }
+    if (capturedPieceType === "king") {
+      updatePlayerAliveState(capturedPlayerColor, false);
+    }
 
-  if (newMove.includes("RESTORE")) {
+    updatePlayerPoints(movingPlayerColor, points, newMove);
+  } else if (newMove.includes("RESTORE")) {
     const restoredPieceInfo = newMove
       .split(" ")
       .at(2)
@@ -133,12 +154,19 @@ export const applyMoveToBoard = (
     const restoredPieceType = restoredPieceInfo
       .split(".")[1]
       .replace(/\d/g, "");
+    const restoredPlayerColor = restoredPieceInfo.split(".")[0];
 
     const points = getPointsForPiece(restoredPieceType);
 
     newBoard.push(`${restoredPieceInfo}.${beforeMoveArea}`);
 
+    if (restoredPieceType === "king") {
+      updatePlayerAliveState(restoredPlayerColor, true);
+    }
+
     updatePlayerPoints(movingPlayerColor, -points);
+  } else {
+    updatePlayerPoints(movingPlayerColor, 0, newMove);
   }
 
   return newBoard;

@@ -26,13 +26,7 @@ function OpeningPreview({ opening, i, onClick }) {
           {opening.title}
         </i>
         <i className="text-white/60 text-[1.1vw] !font-[900] capitalize w-full capitalize">
-          {opening.moves.length} moves;{" "}
-          {opening.moves.length <= 3
-            ? "short"
-            : opening.moves.length <= 6
-              ? "medium-length"
-              : "long"}
-          ; {opening.tags.map((tag) => tag)}
+          {opening.moves.length} moves; {opening.tags.map((tag) => tag)}
         </i>
         <p className="text-left text-white/70 text-[0.9vw]">
           {opening.description.split(" ").slice(0, 10).join(" ")}...

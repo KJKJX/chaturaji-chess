@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Content Additions+",
+    date: "2026-09-24T13:20:48.869Z",
+    type: "info",
+    tags: ["Learn Page", "Openings"],
+    description:
+      "The rest of the nesscary content has been added, including new openings and variations, along with 2 new tips submitted by Diamond_427. Also, 3 puzzles have been added from IHaveTheSauce's Forum!",
+  },
+  {
     title: "Content Additions",
     date: "2026-09-07T20:49:28.843Z",
     type: "info",

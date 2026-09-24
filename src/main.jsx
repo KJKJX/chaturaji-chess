@@ -5,8 +5,6 @@ import App from "./App.jsx";
 import { NuqsAdapter } from "nuqs/adapters/react";
 createRoot(document.getElementById("root")).render(
   <NuqsAdapter>
-    <StrictMode>
-      <App />
-    </StrictMode>
-  </NuqsAdapter>
+    <App />
+  </NuqsAdapter>,
 );

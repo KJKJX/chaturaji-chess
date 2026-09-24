@@ -11,7 +11,7 @@ function InteractivePuzzle({ puzzle, setTab, backToAllPuzzles }) {
   const [board, setBoard] = useState(puzzle.board);
   function handleCheckPuzzleMoveCorrect(puzzleMove) {
     let toCheck = moves[move + 1];
-    if (toCheck.split(" ").length === 4) {
+    if (toCheck.split(" ").length === 4 || !isNaN(+toCheck.split(" ")[2])) {
       toCheck = toCheck.split(" ");
       toCheck.pop();
       toCheck = toCheck.join(" ");

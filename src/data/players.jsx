@@ -141,7 +141,7 @@ export const players = [
     status: "contributor",
     contributions: ["Submitted Opening corrections."],
     playRate: 3,
-    img: blank_image,
+    img: "https://images.chesscomfiles.com/uploads/v1/user/574399850.5fe485ab.50x50o.00d4840961e2.png",
     description:
       "Logik-47 enjoys nature and math very much, and they mostly play Chaturaji as a break after long hours of studying. They’ve been playing Chaturaji for not too long, since around June-July and is currently trying to get to 2400.",
   },
@@ -153,7 +153,7 @@ export const players = [
     status: "contributor",
     contributions: ["Submits chaturaji content."],
     playRate: 3,
-    img: blank_image,
+    img: "https://images.chesscomfiles.com/uploads/v1/user/50255676.5d4aba91.50x50o.371c2bcccef4@2x.png",
     description:
       "agm2920 is really just a chill, cool guy. As a fun fact, he was also apparently SxbZer0's mentor starting out. He's trying to get to 2600 and is steadily making progress..... with minor difficulties.",
   },

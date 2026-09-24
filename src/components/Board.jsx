@@ -177,6 +177,8 @@ function Board({
     };
   }, []);
   useEffect(() => {
+    console.log(currentMove, moves.length);
+
     if (currentMove >= moves.length) {
       setCompleted(true);
       setTurn(null);

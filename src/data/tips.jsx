@@ -1,5 +1,21 @@
 let initTips = [
   {
+    title:
+      "Don't be too aggressive when you can be checked, because another player might take your peice while you escape from check.",
+    type: "tip",
+    info: "...",
+    from: "Diamond_427",
+    elo: 0,
+  },
+  {
+    title:
+      "You can sacrifice yourself to the person with the most points in the endgame, as you can get second because of auto-claim.",
+    type: "tip",
+    info: "...",
+    from: "Diamond_427",
+    elo: 0,
+  },
+  {
     title: "If you move first, start by pushing your king's pawn.",
     type: "opening",
     info: "...",
