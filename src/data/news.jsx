@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "Minor Updates",
+    date: "2026-10-05T15:03:52.321Z",
+    type: "info",
+    tags: ["Player Profiles", "Chaturaji Content"],
+    description:
+      "Just some minor updates to the player profiles and Chaturaji content, with rating adjustments and a new game submitted by TheDarkAxolotl.",
+  },
+  {
     title: "Content Additions+",
     date: "2026-09-24T13:20:48.869Z",
     type: "info",

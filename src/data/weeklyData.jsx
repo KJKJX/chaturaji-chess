@@ -8,12 +8,12 @@ export const outstandingGames = [
     date: "2026-08-15T15:00:40.680Z",
   },
   {
-    title: "2350+ Anonymous? 9 MOVES?",
-    caption: "Quickest Game on EARTH!?",
+    title: "Even faster 8 move game?!",
+    caption: "Why so many fast games?",
     description:
-      "In an anonymous 2350+ match, 4 people played one of the downright FASTEST matches, lasting only 9 moves, for a lobby with extremely experienced players. Click the link for yourself.",
-    link: "https://www.chess.com/variants/chaturaji/game/103913444/0/2",
-    date: "2026-07-10T23:24:44.239Z",
+      "I know. 8 moves. That can't be right, espically for 4 2300+ players. But apperantly, fast games are becoming more common. Doesn't make sense, right? Well, check it out for yourself.",
+    link: "https://www.chess.com/variants/chaturaji/game/109677514/0/1",
+    date: "2026-10-05T14:52:03.465Z",
   },
 ].sort((x, y) => new Date(y.date) - new Date(x.date));
 

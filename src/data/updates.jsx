@@ -32,7 +32,7 @@ export const updates = [
     title: "account update",
     description:
       "Now you can create an account! Creating one will allow you to create puzzles, guides, tips, and more, which will be revised by our special admin team, and it will allow you track your puzzle progress.",
-    date: "2026-10-15T04:00:00.000Z",
+    date: "2026-12-01T04:00:00.000Z",
   },
 ].sort((a, b) =>
   +a.version.replaceAll(".", "") <= +b.version.replaceAll(".", "") ? -1 : 1,

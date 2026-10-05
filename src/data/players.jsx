@@ -24,7 +24,7 @@ export const players = [
   },
   {
     name: "Articpolarbear",
-    peak: 2745,
+    peak: 2845,
     color: "text-green-100",
     status: "legend",
     playRate: 2,
@@ -34,7 +34,7 @@ export const players = [
   },
   {
     name: "King_Chessable",
-    peak: 2754,
+    peak: 2721,
     color: "text-emerald-300",
     status: "legend",
     playRate: 3,
@@ -54,18 +54,18 @@ export const players = [
   },
   {
     name: "waterdragon888",
-    peak: 2200,
+    peak: 2300,
     color: "text-purple-100",
     status: "contributor",
     contributions: ["Helped with board feature", "Codes with Python"],
     playRate: 3,
     img: "https://images.chesscomfiles.com/uploads/v1/user/53442930.eef5436e.50x50o.3b099df89b40@2x.jpg",
     description:
-      "waterdragon888 is a friend of Universoul's and is on the top 20 list in hyper Chaturaji. He's a wemmbu fan and (supposedly) has a private vocabulary tutor.",
+      "waterdragon888 is a friend of Universoul's and is on the top 20 list in hyper Chaturaji. He's a wemmbu fan too. (He asked me to take out the part of his private vocabulary tutor.)",
   },
   {
     name: "Universoul_Crown",
-    peak: 2336,
+    peak: 2371,
     color: "text-emerald-100",
     status: "creator",
     contributions: ["Created the website"],
@@ -147,7 +147,7 @@ export const players = [
   },
   {
     name: "agm2920",
-    peak: 2450,
+    peak: 2500,
     color: "text-sky-200",
     matches: 550,
     status: "contributor",
@@ -159,7 +159,7 @@ export const players = [
   },
   {
     name: "Taran0915",
-    peak: 2650,
+    peak: 2450,
     color: "text-red-200",
     matches: 550,
     status: "legend",
