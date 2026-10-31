@@ -24,7 +24,7 @@ export const players = [
   },
   {
     name: "Articpolarbear",
-    peak: 2845,
+    peak: 3000,
     color: "text-green-100",
     status: "legend",
     playRate: 2,
@@ -34,7 +34,7 @@ export const players = [
   },
   {
     name: "King_Chessable",
-    peak: 2721,
+    peak: 2650,
     color: "text-emerald-300",
     status: "legend",
     playRate: 3,
@@ -65,7 +65,7 @@ export const players = [
   },
   {
     name: "Universoul_Crown",
-    peak: 2371,
+    peak: 2271,
     color: "text-emerald-100",
     status: "creator",
     contributions: ["Created the website"],
@@ -76,7 +76,7 @@ export const players = [
   },
   {
     name: "SxbZer0",
-    peak: 2200,
+    peak: 2321,
     color: "text-sky-200",
     status: "sub creator",
     contributions: ["Helped create the website", "Close friend of Universoul"],
@@ -87,7 +87,7 @@ export const players = [
   },
   {
     name: "Diamond_427",
-    peak: 2255,
+    peak: 2300,
     color: "text-amber-100",
     status: "contributor",
     contributions: ["Gave ideas for updates"],
@@ -159,7 +159,7 @@ export const players = [
   },
   {
     name: "Taran0915",
-    peak: 2450,
+    peak: 2350,
     color: "text-red-200",
     matches: 550,
     status: "legend",

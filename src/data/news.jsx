@@ -1,5 +1,13 @@
 export const news = [
   {
+    title: "New Guide",
+    date: "2026-10-31T15:17:32.706Z",
+    type: "info",
+    tags: ["Guides", "Learn Page"],
+    description:
+      "A new guide has been added to the Learn Page, providing detailed explanations and examples for the King's Pawn opening, made by IHaveTheSauce. Also added some minor rating updates to the player profiles.",
+  },
+  {
     title: "Minor Updates",
     date: "2026-10-05T15:03:52.321Z",
     type: "info",
