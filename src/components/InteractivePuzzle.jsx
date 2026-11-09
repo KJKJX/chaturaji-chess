@@ -38,7 +38,7 @@ function InteractivePuzzle({ puzzle, setTab, backToAllPuzzles }) {
     setTab("");
     setTimeout(() => {
       setTab("puzzle");
-    }, 500);
+    }, 1000);
   }
   useEffect(() => {
     if (move >= moves.length) {

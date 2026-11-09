@@ -30,6 +30,8 @@ export const puzzles = [
     goal: "As Yellow, since you're good as dead, secure a second place win (or close enough).",
     hint: "Remember double checks!",
     difficulty: "easy",
+    explanation:
+      "Yellow's move captured a pawn and got a double check, granting two points. Yellow's pieces (knight and king) are captured, and blue is claim winned, ending up with 13 points.",
   },
   {
     title: "Playing for 2nd",
@@ -54,8 +56,10 @@ export const puzzles = [
       "red.knight.d8",
     ],
     goal: "As Yellow, try not to lose, even if that means not playing for 1st.",
-    hint: "What's the best wat to end the match?",
+    hint: "What's the best way to end the match?",
     difficulty: "intermediate",
+    explanation:
+      "A simple double check can end with catostropihc results, as Yellow did.",
   },
   {
     title: "Rook Sacrifice",
@@ -87,6 +91,8 @@ export const puzzles = [
     goal: "As Yellow, control the match by preventing a death though it might cause a loss of points.",
     hint: "Controlling the game is better than points.",
     difficulty: "expert",
+    explanation:
+      "Yellow prevented a death via sacrificing a rook. This puts Yellow at a point disadvatntage, but a large material advantage, therefore they control the match.",
   },
   {
     title: "The Trapped Pawn",
@@ -127,6 +133,8 @@ export const puzzles = [
     goal: "As red, trap yellow's pawn and capture it, confirming your win.",
     hint: "Start with Kf4.",
     difficulty: "hard",
+    explanation:
+      "With this sequence of movements, the pawn is inevitably going to be captured.",
   },
   {
     title: "8 Points. 1 Capture.",
@@ -192,6 +200,8 @@ export const puzzles = [
     goal: "As green, turn around the match with a capture that gains you 8 points!",
     hint: "Use green's bishop.",
     difficulty: "easy",
+    explanation:
+      "Simeltaniously capturing a knight and acheveing a rare triple check is 5 + 3 points.",
   },
   {
     title: "Forked You!",
@@ -238,5 +248,7 @@ export const puzzles = [
     goal: "Finish off Red's chances of winning by capturing all of their pieces!",
     hint: "Start with a fork.",
     difficulty: "intermediate",
+    explanation:
+      "Blue forked red; and the recapture led to blue's bishop checking red, causing him to reveal his rook.",
   },
 ];

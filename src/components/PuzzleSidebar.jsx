@@ -47,13 +47,26 @@ function PuzzleSidebar({ puzzle, message, replayPuzzle, backToAllPuzzles }) {
       </AnimatePresence>
       {message === "Puzzle Complete!" && (
         <>
-          <motion.img
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", damping: 7, bounce: 1 }}
-            src={puzzle_complete}
-            className="mx-auto mt-[1vw] h-[11vw] grayscale-80"
-          />
+          <motion.p
+            key={message}
+            initial={{ scale: 1.2, opacity: 1 }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+            }}
+            exit={{
+              scale: 1.2,
+              opacity: 0,
+            }}
+            transition={{
+              // Spring configuration for the pop-up phase
+              scale: { type: "spring", stiffness: 260, damping: 20 },
+              // Loop settings for the wiggle phase
+            }}
+            className="text-white/80 text-[0.85vw] text-center p-[1vw] border-[0.1vw] border-white/30 rounded-[1vw] mt-[1vw] py-[0.5vw]"
+          >
+            {puzzle.explanation}
+          </motion.p>
           <div className="flex flex-row">
             {" "}
             <Tab className="!scale-85 mt-[0.75vw]" onClick={backToAllPuzzles}>
